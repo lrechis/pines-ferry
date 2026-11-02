@@ -1,221 +1,738 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
 <title>Pines Winter Ferry Specials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#16324a; --ink2:#3d5a73; --bg:#eef4f8; --card:#ffffff;
-    --line:#d7e3ec; --green:#1e7d46; --greenbg:#e2f3e8; --amber:#a86a00; --amberbg:#fdf0d3;
-    --chip:#eef4f8; --accent:#0f5d8f;
+    --bg:#f4f6f3;
+    --surface:#ffffff;
+    --surface-2:#eef3f0;
+    --ink:#142535;
+    --muted:#5d6f7f;
+    --line:#d9e1dd;
+    --navy:#0d2e4d;
+    --navy-2:#123a5e;
+    --accent:#0b6b6e;
+    --accent-ink:#ffffff;
+    --confirmed-bg:#dff2e3;
+    --confirmed-text:#175c2e;
+    --confirmed-dot:#1a8a45;
+    --gauging-bg:#fceec9;
+    --gauging-text:#7a4d00;
+    --gauging-dot:#c67b00;
+    --past-bg:#e8edf0;
+    --past-text:#47596a;
+    --shadow:0 10px 30px rgba(13,46,77,.08);
+    --radius:18px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0c1620;
+      --surface:#152637;
+      --surface-2:#1a2f45;
+      --ink:#edf3f5;
+      --muted:#a8bcc9;
+      --line:#2b4155;
+      --navy:#e8f0f5;
+      --navy-2:#cfe0ec;
+      --accent:#2db8b5;
+      --accent-ink:#06202a;
+      --confirmed-bg:#173d26;
+      --confirmed-text:#a7e8bb;
+      --confirmed-dot:#4ade80;
+      --gauging-bg:#4a3410;
+      --gauging-text:#fde68a;
+      --gauging-dot:#fbbf24;
+      --past-bg:#24384c;
+      --past-text:#c2d2de;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
   }
   *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-  header{background:linear-gradient(160deg,#0d2f47,#17557e);color:#fff;padding:34px 18px 26px;text-align:center;position:relative;overflow:hidden}
-  header .route{letter-spacing:.14em;text-transform:uppercase;font-size:12px;opacity:.85}
-  header h1{margin:8px 0 6px;font-size:32px;line-height:1.15}
-  header p.sub{margin:0 auto;max-width:640px;font-size:15px;opacity:.92}
-  .flake{position:absolute;top:-10%;color:#fff;opacity:.8;animation:fall linear infinite;pointer-events:none}
-  @keyframes fall{to{transform:translateY(320px)}}
-  main{max-width:860px;margin:0 auto;padding:18px 14px 40px}
-  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13.5px;margin:14px 0 4px}
-  .dot{width:10px;height:10px;border-radius:50%;background:#c9a227;flex:none}
-  .dot.live{background:#2ea36b}
-  .legend{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:12px 0 20px}
-  h2{font-size:20px;margin:22px 0 4px}
-  .countline{color:var(--ink2);font-size:14px;margin:0 0 12px}
-  .filters{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
-  .filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;font-size:13.5px;cursor:pointer}
-  .filters button.on{background:var(--accent);border-color:var(--accent);color:#fff}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px;display:flex;gap:16px}
-  .datebox{flex:none;width:64px;text-align:center;background:var(--chip);border-radius:10px;padding:8px 4px;height:fit-content}
-  .datebox .dow{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2)}
-  .datebox .dnum{font-size:24px;font-weight:700;line-height:1.1}
-  .datebox .mon{font-size:12px;color:var(--ink2)}
-  .cardbody{flex:1;min-width:0}
-  .timerow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .time{font-size:18px;font-weight:700}
-  .route{font-size:16px}
-  .badge{font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:999px;text-transform:uppercase}
-  .badge.confirmed{background:var(--greenbg);color:var(--green)}
-  .badge.gauging{background:var(--amberbg);color:var(--amber)}
-  .org{margin-top:6px;font-size:14.5px}
-  .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;background:var(--chip);border:1px solid var(--line);color:var(--ink2);border-radius:999px;padding:2px 8px;margin-left:8px;vertical-align:middle;text-transform:uppercase}
-  .dep{margin-top:4px;font-size:13.5px;color:var(--ink2)}
-  .notes{margin-top:8px;font-size:14px;color:var(--ink)}
-  .conn{margin-top:6px;font-size:13.5px;color:var(--ink2)}
-  .who{margin-top:10px;font-size:14px}
-  .who .lbl{font-weight:700}
-  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
-  .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:13px}
-  .chip .ini{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:10.5px;font-weight:700;margin-right:6px;vertical-align:-5px}
-  .ridersnote{font-size:13.5px;color:var(--ink2);margin-top:6px}
-  .btn{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;padding:9px 16px;border-radius:10px}
-  .btn.form{background:#fff;color:var(--accent);border:1.5px solid var(--accent)}
-  .history .card{padding:12px 16px}
-  .about{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:14px;color:var(--ink2);margin-top:26px}
-  .about h3{margin:0 0 8px;color:var(--ink);font-size:16px}
-  .about a{color:var(--accent)}
-  footer{text-align:center;color:var(--ink2);font-size:12.5px;padding:0 16px 30px}
-  @media (max-width:560px){ .card{flex-direction:column} .datebox{width:100%;display:flex;gap:8px;align-items:baseline;justify-content:center} }
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Libre Franklin",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px 56px}
+
+  /* Header */
+  .hero{padding:34px 0 8px}
+  .route-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+  .route-line .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+  .route-line .rule{height:1px;background:var(--line);flex:1;min-width:40px}
+  h1{font-family:"Newsreader",Georgia,serif;font-size:clamp(36px,6vw,58px);line-height:.98;letter-spacing:-.02em;margin:14px 0 12px;color:var(--navy);font-weight:700}
+  h1 em{font-style:italic;font-weight:600}
+  .subtitle{font-size:17px;line-height:1.6;color:var(--muted);max-width:680px;margin:0}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .meta-pill{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:13px;font-weight:600;box-shadow:var(--shadow)}
+  .meta-pill strong{color:var(--navy)}
+  .meta-pill .live{width:8px;height:8px;border-radius:50%;background:#1a8a45}
+
+  /* Ferry illustration strip — winter scene */
+  .sea{position:relative;margin-top:24px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,#e9f3f7 0%,#d2e7ef 52%,#a9cbd9 53%,#7fb0c2 100%)}
+  @media (prefers-color-scheme: dark){ .sea{background:linear-gradient(180deg,#162f45 0%,#1c3d58 55%,#234a66 56%,#2a5a78 100%)} }
+  .sea svg{display:block;width:100%;height:auto;position:relative;z-index:1}
+  /* Falling snow overlay */
+  .snowfall{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
+  .snowfall i,.snowfall b{position:absolute;top:-24px;left:var(--x);color:#fff;animation:snow-fall var(--d,10s) linear infinite;animation-delay:var(--delay,0s)}
+  .snowfall i{width:var(--s,6px);height:var(--s,6px);background:#fff;border-radius:50%;opacity:var(--o,.9);box-shadow:0 0 6px rgba(255,255,255,.95)}
+  .snowfall b{font-size:var(--s,16px);line-height:1;font-weight:400;opacity:var(--o,.96);text-shadow:0 1px 7px rgba(255,255,255,.85)}
+  @keyframes snow-fall{
+    0%{transform:translate3d(0,-12px,0) rotate(0deg)}
+    50%{transform:translate3d(var(--sway,12px),96px,0) rotate(165deg)}
+    100%{transform:translate3d(calc(var(--sway,12px) * -.65),196px,0) rotate(340deg)}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .snowfall i,.snowfall b{animation:none;top:var(--top,22%)}
+  }
+
+  /* Legend / how it works */
+  .legend{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:var(--shadow)}
+  @media(max-width:640px){.legend{grid-template-columns:1fr}}
+  .legend h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:var(--muted)}
+  .legend p{margin:6px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
+  .legend-item{display:flex;gap:12px;align-items:flex-start}
+  .badge{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:6px 10px;border-radius:999px;white-space:nowrap;line-height:1}
+  .badge::before{content:"";width:8px;height:8px;border-radius:50%;flex:none}
+  .badge.confirmed{background:var(--confirmed-bg);color:var(--confirmed-text)}
+  .badge.confirmed::before{background:var(--confirmed-dot)}
+  .badge.gauging{background:var(--gauging-bg);color:var(--gauging-text)}
+  .badge.gauging::before{background:var(--gauging-dot)}
+  .badge.past{background:var(--past-bg);color:var(--past-text)}
+  .badge.past::before{background:var(--past-text)}
+
+  /* Sections */
+  .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:36px 0 14px}
+  .section-head h2{font-family:"Newsreader",Georgia,serif;font-size:30px;line-height:1;margin:0;color:var(--navy)}
+  .section-head p{margin:6px 0 0;color:var(--muted);font-size:14px;max-width:560px}
+  .count{font-size:13px;font-weight:700;color:var(--muted);white-space:nowrap}
+
+  /* Filters */
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+  .filter-btn{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:9px 14px;border-radius:999px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+  .filter-btn[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+  @media (prefers-color-scheme: dark){ .filter-btn[aria-pressed="true"]{background:#e8f0f5;color:#0c1620;border-color:#e8f0f5} }
+  .filter-btn:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+  /* Upcoming cards */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px}
+  .card-top{display:flex;gap:16px;align-items:flex-start}
+  .date-box{flex:none;width:68px;text-align:center;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface-2)}
+  .date-box .dow{font-size:11px;letter-spacing:.12em;font-weight:800;text-transform:uppercase;padding:7px 4px 2px;color:var(--accent)}
+  .date-box .day{font-family:"Newsreader",Georgia,serif;font-size:32px;line-height:1;font-weight:700;color:var(--navy);padding:0 4px}
+  .date-box .mon{font-size:11px;letter-spacing:.12em;font-weight:800;text-transform:uppercase;padding:2px 4px 8px;color:var(--muted)}
+  .card-head{flex:1;min-width:0}
+  .time{font-size:24px;font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--navy)}
+  .time small{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:0}
+  .direction{margin-top:5px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .direction .arrow{color:var(--accent);font-weight:800}
+  .organizer{margin-top:4px;font-size:13px;color:var(--muted)}
+  .organizer strong{color:var(--ink)}
+  .organizer-tag{display:inline-flex;align-items:center;gap:5px;margin-left:7px;padding:3px 8px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--navy);font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;vertical-align:1px}
+  .organizer-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .h-org-tag{font-weight:800;color:var(--navy);letter-spacing:.03em;text-transform:uppercase;font-size:11px;white-space:nowrap}
+  .notes{font-size:14px;color:var(--muted);line-height:1.6;margin:0}
+  .notes strong{color:var(--ink)}
+  .connection{display:flex;gap:10px;align-items:flex-start;background:var(--surface-2);border-radius:12px;padding:11px 12px;font-size:13px;line-height:1.5}
+  .connection span:first-child{font-size:16px;line-height:1}
+  .connection strong{color:var(--navy)}
+  .departure-note{display:flex;gap:10px;align-items:flex-start;background:var(--surface-2);border:1px dashed var(--line);border-radius:12px;padding:11px 12px;font-size:13px;line-height:1.5;color:var(--ink)}
+  .departure-note span:first-child{font-size:15px;line-height:1.2}
+  .legend-foot{grid-column:1 / -1;margin:0;border-top:1px solid var(--line);padding-top:14px;font-size:14px;color:var(--muted);line-height:1.55}
+  .legend-foot strong{color:var(--ink)}
+  /* Who's in */
+  .joining{border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:var(--surface-2);display:flex;flex-direction:column;gap:10px}
+  .joining-title{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--muted);display:flex;justify-content:space-between;gap:10px;align-items:center}
+  .joining-title span:last-child{letter-spacing:0;text-transform:none;font-weight:600;font-size:11px;white-space:nowrap}
+  .join-group{display:flex;flex-direction:column;gap:6px}
+  .join-group + .join-group{border-top:1px dashed var(--line);padding-top:10px}
+  .join-label{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;line-height:1}
+  .join-label i{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block}
+  .join-label.confirmed{color:var(--confirmed-text)} .join-label.confirmed i{background:var(--confirmed-dot)}
+  .join-label.maybe{color:var(--gauging-text)} .join-label.maybe i{background:var(--gauging-dot)}
+  .join-label .n{font-weight:700;color:var(--muted);text-transform:none;letter-spacing:0}
+  .people{display:flex;flex-wrap:wrap;gap:6px}
+  .person{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 10px 5px 6px;font-size:13px;font-weight:600;line-height:1.25;color:var(--ink)}
+  .person .avatar{width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;letter-spacing:.02em;flex:none}
+  @media (prefers-color-scheme: dark){ .person .avatar{background:#e8f0f5;color:#0c1620} }
+  .person small{font-weight:600;color:var(--muted);font-size:11px}
+  .person.maybe-person{border-style:dashed}
+  .join-empty{font-size:13px;color:var(--muted);line-height:1.45}
+  .join-empty strong{color:var(--ink)}
+  .h-joining{margin-top:8px;display:flex;flex-direction:column;gap:4px;font-size:13px;line-height:1.5}
+  .h-joining-row{display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+  .h-joining-row b{font-size:11px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .h-joining-row b.c{color:var(--confirmed-text)} .h-joining-row b.m{color:var(--gauging-text)}
+  .h-joining-row span{color:var(--ink)}
+  .card-actions{margin-top:auto;display:flex;flex-direction:column;gap:9px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:800;font-size:15px;padding:13px 16px;border-radius:12px;border:1px solid transparent;text-align:center;cursor:pointer}
+  .btn-primary{background:var(--navy);color:#fff}
+  @media (prefers-color-scheme: dark){ .btn-primary{background:#e8f0f5;color:#0c1620} }
+  .btn-primary:hover{opacity:.92}
+  .btn-accent{background:var(--accent);color:var(--accent-ink)}
+  .btn-secondary{background:transparent;color:var(--navy);border-color:var(--line)}
+  .btn-note{font-size:12px;color:var(--muted);text-align:center;line-height:1.45;margin:0}
+  .hidden-by-filter{display:none !important}
+  .empty-filter{display:none;background:var(--surface);border:1px dashed var(--line);border-radius:16px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
+  .empty-filter.show{display:block}
+
+  .meta-pill .live.stale{background:var(--gauging-dot)}
+  .no-runs{grid-column:1 / -1;background:var(--surface);border:1px dashed var(--line);border-radius:16px;padding:22px;text-align:center;color:var(--muted);font-size:14px}
+
+  /* Earlier list */
+  .history{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+  .history-row{display:grid;grid-template-columns:128px 92px 1fr auto;gap:14px;align-items:start;padding:16px 18px;border-top:1px solid var(--line)}
+  .history-row:first-child{border-top:0}
+  @media(max-width:700px){
+    .history-row{grid-template-columns:1fr auto;gap:6px 12px}
+    .h-time{grid-column:1}
+    .h-main{grid-column:1 / -1}
+    .h-badge{grid-column:2;grid-row:1}
+  }
+  .h-date{font-weight:800;font-size:14px;color:var(--navy);line-height:1.35}
+  .h-date span{display:block;font-weight:600;color:var(--muted);font-size:12px}
+  .h-time{font-weight:800;font-size:15px}
+  .h-main{min-width:0}
+  .h-dir{font-weight:700;font-size:15px}
+  .h-org{font-size:13px;color:var(--muted);margin-top:2px}
+  .h-detail{font-size:13px;color:var(--muted);line-height:1.55;margin-top:5px}
+  .h-detail strong{color:var(--ink)}
+
+  footer{margin-top:36px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:14px;line-height:1.65}
+  footer strong{color:var(--ink)}
+  footer a{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+  .disclaimer{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
+  .disclaimer h2{font-family:"Newsreader",Georgia,serif;font-size:21px;line-height:1.15;margin:0 0 8px;color:var(--navy)}
+  .disclaimer p{margin:0 0 10px;font-size:14px;color:var(--muted);line-height:1.65}
+  .disclaimer p:last-of-type{margin-bottom:0}
+  .disclaimer p strong{color:var(--ink)}
+  .disclaimer a{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+  .disclaimer-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .btn-mail{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:800;font-size:14px;padding:11px 16px;border-radius:12px;border:1px solid var(--navy);background:var(--navy);color:#fff}
+  @media (prefers-color-scheme: dark){ .btn-mail{border-color:#e8f0f5;background:#e8f0f5;color:#0c1620} }
+  .btn-mail.secondary{background:transparent;color:var(--navy)}
+  @media (prefers-color-scheme: dark){ .btn-mail.secondary{color:#e8f0f5;border-color:var(--line)} }
+  .btn-mail:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header>
-  <div class="route">Long Island — Fire Island Pines</div>
-  <h1>Pines Winter Ferry Specials</h1>
-  <p class="sub">Off-schedule charter boats between Fire Island Pines and the mainland, coordinated on the Pines Winter Ferry mailing list</p>
-</header>
-<main>
-  <span class="pill"><span class="dot" id="livedot"></span><span id="stamp">Postings as of …</span></span>
+<div class="wrap">
 
-  <div class="legend">Typically two providers run specials: Sayville Ferry (from Sayville) and H2O Limo (usually from Blue Point). A provider and departure point is shown only when the organizer states it.</div>
+  <header class="hero">
+    <div class="route-line"><span>Long Island</span><span class="dot" aria-hidden="true"></span><span class="rule" aria-hidden="true"></span><span aria-hidden="true">⛴</span><span class="rule" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span><span>Fire Island Pines</span></div>
+    <h1>Pines Winter Ferry — <em>Specials</em></h1>
+    <p class="subtitle">Off-schedule charter boats between Fire Island Pines and the mainland, coordinated on the Pines Winter Ferry mailing list.</p>
+    <div class="meta-row" aria-label="Postings information">
+      <span class="meta-pill"><span class="live" id="liveDot" aria-hidden="true"></span> Postings as of <strong>&nbsp;<span id="updatedStamp">Mon Nov 2, 2026, 1:39 AM EST</span></strong></span>
+    </div>
 
-  <h2>Coming up</h2>
-  <p class="countline" id="countline"></p>
-  <div class="filters" id="filters">
-    <button data-f="all" class="on">All</button>
-    <button data-f="confirmed">Booked / Confirmed</button>
-    <button data-f="gauging">Gauging interest</button>
+    <div class="sea" aria-hidden="true">
+      <svg viewBox="0 0 1020 150" role="img" aria-label="">
+        <defs>
+          <g id="flake">
+            <g stroke="#ffffff" stroke-width="1.6" stroke-linecap="round">
+              <path d="M0 -7 L0 7 M-6.1 -3.5 L6.1 3.5 M-6.1 3.5 L6.1 -3.5"/>
+              <path d="M0 -7 l-2 2.2 M0 -7 l2 2.2 M0 7 l-2 -2.2 M0 7 l2 -2.2" stroke-width="1.2"/>
+            </g>
+            <circle cx="0" cy="0" r="1.1" fill="#ffffff"/>
+          </g>
+        </defs>
+        <!-- Pale winter sun -->
+        <circle cx="880" cy="34" r="20" fill="#f6d47a" opacity=".55"/>
+        <circle cx="880" cy="34" r="27" fill="#ffffff" opacity=".18"/>
+        <!-- Snowflakes scattered across the sky -->
+        <g>
+          <use href="#flake" transform="translate(48 26) scale(1.15)" opacity=".95"/>
+          <use href="#flake" transform="translate(118 14) scale(.7)" opacity=".75"/>
+          <use href="#flake" transform="translate(178 48) scale(.9)" opacity=".85"/>
+          <use href="#flake" transform="translate(410 18) scale(1.25)" opacity=".95"/>
+          <use href="#flake" transform="translate(472 44) scale(.75)" opacity=".8"/>
+          <use href="#flake" transform="translate(548 22) scale(1)" opacity=".9"/>
+          <use href="#flake" transform="translate(618 52) scale(.65)" opacity=".7"/>
+          <use href="#flake" transform="translate(682 16) scale(1.3)" opacity=".95"/>
+          <use href="#flake" transform="translate(742 46) scale(.85)" opacity=".85"/>
+          <use href="#flake" transform="translate(822 66) scale(.7)" opacity=".75"/>
+          <use href="#flake" transform="translate(942 22) scale(1.05)" opacity=".9"/>
+          <use href="#flake" transform="translate(982 58) scale(.75)" opacity=".8"/>
+          <use href="#flake" transform="translate(92 68) scale(.6)" opacity=".65"/>
+          <use href="#flake" transform="translate(508 72) scale(.6)" opacity=".65"/>
+          <use href="#flake" transform="translate(368 68) scale(.55)" opacity=".6"/>
+        </g>
+        <!-- Falling snow dots in the sky -->
+        <g fill="#ffffff">
+          <circle cx="70" cy="52" r="2.2" opacity=".8"/><circle cx="230" cy="20" r="1.8" opacity=".7"/><circle cx="300" cy="54" r="2.4" opacity=".85"/><circle cx="520" cy="34" r="1.7" opacity=".7"/><circle cx="590" cy="70" r="2.2" opacity=".8"/><circle cx="720" cy="28" r="1.8" opacity=".7"/><circle cx="850" cy="48" r="2.3" opacity=".8"/><circle cx="960" cy="78" r="1.8" opacity=".7"/><circle cx="640" cy="12" r="1.6" opacity=".65"/><circle cx="150" cy="82" r="1.7" opacity=".6"/>
+        </g>
+        <!-- Ferry -->
+        <g fill="#0d2e4d">
+          <path d="M120 92 L150 62 L430 62 L460 92 Z" opacity=".92"/>
+          <rect x="205" y="38" width="170" height="24" rx="4"/>
+          <rect x="245" y="22" width="90" height="16" rx="4"/>
+        </g>
+        <!-- Snow caps on the ferry roofs and hull -->
+        <g fill="#ffffff">
+          <rect x="240" y="17" width="100" height="7" rx="3.5" opacity=".98"/>
+          <rect x="199" y="33" width="182" height="7" rx="3.5" opacity=".98"/>
+          <path d="M144 62 L436 62 L430 67 L150 67 Z" opacity=".92"/>
+          <ellipse cx="290" cy="34" rx="26" ry="3.2" opacity=".9"/>
+        </g>
+        <g fill="#ffffff" opacity=".9">
+          <rect x="218" y="44" width="14" height="10" rx="2"/><rect x="240" y="44" width="14" height="10" rx="2"/><rect x="262" y="44" width="14" height="10" rx="2"/><rect x="284" y="44" width="14" height="10" rx="2"/><rect x="306" y="44" width="14" height="10" rx="2"/><rect x="328" y="44" width="14" height="10" rx="2"/>
+        </g>
+        <!-- Snowy distant shore / boats on the right -->
+        <path d="M700 92 Q 790 72, 870 86 T 1020 84 L1020 94 L700 94 Z" fill="#ffffff" opacity=".5"/>
+        <g fill="#0d2e4d" opacity=".55"><path d="M760 92 l28-18 6 18z"/><path d="M800 92 l22-14 5 14z"/></g>
+        <g fill="#ffffff" opacity=".9"><path d="M760 92 l28-18 3.2 7.2 -18.5 10.8z"/><path d="M800 92 l22-14 2.8 6 -14.8 8z"/></g>
+        <!-- Icy water -->
+        <path d="M0 102 Q 60 92, 120 102 T 240 102 T 360 102 T 480 102 T 600 102 T 720 102 T 840 102 T 960 102 T 1080 102" fill="none" stroke="#ffffff" stroke-opacity=".8" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M0 108 Q 60 96, 120 108 T 240 108 T 360 108 T 480 108 T 600 108 T 720 108 T 840 108 T 960 108 T 1080 108" fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+        <path d="M0 128 Q 70 118, 140 128 T 280 128 T 420 128 T 560 128 T 700 128 T 840 128 T 980 128 T 1120 128" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <div class="snowfall">
+        <b style="--x:4%;--s:18px;--d:11s;--delay:-3s;--sway:16px;--o:.95;--top:18%">❄</b>
+        <i style="--x:11%;--s:5px;--d:8s;--delay:-5s;--sway:10px;--o:.85;--top:42%"></i>
+        <b style="--x:18%;--s:13px;--d:13s;--delay:-8s;--sway:-12px;--o:.8;--top:58%">❄</b>
+        <i style="--x:26%;--s:7px;--d:9s;--delay:-2s;--sway:14px;--o:.9;--top:26%"></i>
+        <i style="--x:34%;--s:4px;--d:7s;--delay:-6s;--sway:8px;--o:.75;--top:64%"></i>
+        <b style="--x:43%;--s:20px;--d:12s;--delay:-7s;--sway:18px;--o:.95;--top:36%">❄</b>
+        <i style="--x:52%;--s:6px;--d:8.5s;--delay:-4s;--sway:-10px;--o:.85;--top:20%"></i>
+        <b style="--x:60%;--s:14px;--d:10s;--delay:-1s;--sway:12px;--o:.85;--top:52%">❄</b>
+        <i style="--x:68%;--s:5px;--d:7.5s;--delay:-3.5s;--sway:9px;--o:.8;--top:30%"></i>
+        <b style="--x:76%;--s:17px;--d:12.5s;--delay:-9s;--sway:-14px;--o:.9;--top:62%"></i>
+        <i style="--x:84%;--s:7px;--d:9.5s;--delay:-5.5s;--sway:11px;--o:.9;--top:24%"></i>
+        <b style="--x:91%;--s:15px;--d:11.5s;--delay:-6.5s;--sway:13px;--o:.9;--top:44%">❄</b>
+        <i style="--x:96%;--s:4px;--d:8s;--delay:-2.5s;--sway:-8px;--o:.75;--top:70%"></i>
+        <i style="--x:57%;--s:4px;--d:6.5s;--delay:-1.5s;--sway:7px;--o:.7;--top:74%"></i>
+        <i style="--x:22%;--s:4px;--d:6.8s;--delay:-4.5s;--sway:-7px;--o:.7;--top:78%"></i>
+      </div>
+    </div>
+  </header>
+
+  <section class="legend" aria-label="How to read this schedule">
+    <div>
+      <h2>Two kinds of specials</h2>
+      <div class="legend-item"><span class="badge confirmed">Booked / Confirmed</span></div>
+      <p>The boat is booked. Tap <strong>“Count me in”</strong> to join it — your email goes to the group so the organizer has your headcount.</p>
+    </div>
+    <div>
+      <h2>Who’s in</h2>
+      <div class="legend-item"><span class="badge gauging">Gauging interest</span></div>
+      <p>No boat booked yet — someone is seeing who would ride. Tap <strong>“I’m interested”</strong> to help it happen.</p>
+      <p style="margin-top:10px"><strong style="color:var(--confirmed-text)">● Yes</strong> = replied saying they’re in &nbsp;·&nbsp; <strong style="color:var(--gauging-text)">● Maybe</strong> = replied interested, not firm. Names are from replies on the list only — the organizer is listed separately and is not counted as a rider. If no one has replied, it says so.</p>
+    </div>
+    <p class="legend-foot"><strong>Typically two providers run specials:</strong> Sayville Ferry (from Sayville) and H2O Limo (usually from Blue Point). A provider and departure point is shown only when the organizer states it.</p>
+    <p class="legend-foot"><strong>Each trip is run by its organizer</strong> — the person named as <strong>Organizer</strong> on each run below. They are the primary point of contact for that trip and are responsible for the booking, the headcount, and any changes. This page only gathers what organizers post to the mailing list; it is not run by Sayville Ferry, H2O Limo, or any other operator. See the <a href="#disclaimer" style="color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:3px">disclaimer</a> at the bottom of the page.</p>
+  </section>
+
+  <!-- COMING UP -->
+  <div class="section-head">
+    <div>
+      <h2>Coming up</h2>
+      <p>Each card shows <strong>who’s in</strong> — <strong>Yes</strong> = said they’re in, <strong>Maybe</strong> = interested but not firm — from replies on the list. Organizers are not counted as riders. Responding opens a pre-filled email to the group — just add your name and how many people.</p>
+    </div>
+    <span class="count" id="runCount">Nov 2 – Nov 3 · 3 runs</span>
   </div>
-  <div id="runs"></div>
 
-  <h2>Earlier this week</h2>
-  <div id="history" class="history"></div>
-
-  <div class="about" id="disclaimer">
-    <h3>About this page — please read</h3>
-    <p>This page is a volunteer-compiled community summary of posts to the Pines Winter Ferry mailing list. It is <strong>not run by Sayville Ferry, H2O Limo, FIPPOA, or any other boat operator</strong>, and it is not affiliated with or endorsed by any of them.</p>
-    <p>Each trip is the responsibility of its named organizer, who is the primary point of contact for booking, headcount, cost share, and any change or cancellation.</p>
-    <p><a href="https://groups.google.com/g/pines-winter-ferry">View the group on Google Groups</a> · <a href="mailto:pines-winter-ferry+subscribe@googlegroups.com">Subscribe to the list by email</a></p>
+  <div class="filters" role="group" aria-label="Filter upcoming specials">
+    <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All upcoming</button>
+    <button class="filter-btn" type="button" data-filter="confirmed" aria-pressed="false">Booked / Confirmed only</button>
+    <button class="filter-btn" type="button" data-filter="gauging" aria-pressed="false">Gauging interest only</button>
   </div>
-</main>
-<footer>This page reads its schedule from a small data file that is updated as new specials are posted to the mailing list.</footer>
 
+  <div class="cards" id="upcomingCards" aria-live="polite"></div>
+  <noscript><div class="no-runs" style="margin-top:16px">The upcoming schedule loads from the group’s data file and needs JavaScript — you can always see the latest posts in the <a href="https://groups.google.com/g/pines-winter-ferry" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">Pines Winter Ferry group</a>.</div></noscript>
+  <div class="empty-filter" id="emptyFilter">No upcoming specials match that filter.</div>
+
+  <!-- EARLIER THIS WEEK -->
+  <div class="section-head">
+    <div>
+      <h2>Earlier this week</h2>
+      <p>Completed runs from Oct 26–30, for reference. Yes and Maybe list only people named in the posts as joining — organizers are not counted as riders. These boats have already sailed, so there’s no respond button.</p>
+    </div>
+    <span class="count">Oct 26 – Oct 30 · 7 runs</span>
+  </div>
+
+  <div class="history" role="list">
+    <div class="history-row" role="listitem">
+      <div class="h-date">Mon, Oct 26<span>2026</span></div>
+      <div class="h-time">6:40 AM</div>
+      <div class="h-main">
+        <div class="h-dir">Pines → Sayville</div>
+        <div class="h-org">Organizer: John Clifford (JC) <span class="h-org-tag">· Primary contact</span></div>
+        <div class="h-detail"><strong>Connection:</strong> LIRR arriving Penn Station or Grand Central at 8:50 AM. Organizer confirmed the special and invited others to join; pitched as a way to extend the weekend and avoid the triangle boat and long train to NYC.</div>
+        <div class="h-joining">
+          <div class="h-joining-row"><b class="c">Yes</b><span>None named in the post</span></div>
+          <div class="h-joining-row"><b class="m">Maybe</b><span>None named in the post</span></div>
+        </div>
+      </div>
+      <div class="h-badge"><span class="badge confirmed">Booked / Confirmed</span></div>
+    </div>
+
+    <div class="history-row" role="listitem">
+      <div class="h-date">Wed, Oct 28<span>2026</span></div>
+      <div class="h-time">10:30 AM</div>
+      <div class="h-main">
+        <div class="h-dir">Pines → Sayville</div>
+        <div class="h-org">Organizer: Philip Carroll <span class="h-org-tag">· Primary contact</span></div>
+        <div class="h-detail">Proposed as a mid-morning split of a ferry/limo from Fire Island Pines to Sayville; departure time settled at 10:30 AM. Mark Campbell joined (bringing his dachshund). On the morning of the run Michael Giordano confirmed he was leaving Sayville to come pick the group up.</div>
+        <div class="h-joining">
+          <div class="h-joining-row"><b class="c">Yes</b><span>Mark Campbell</span></div>
+          <div class="h-joining-row"><b class="m">Maybe</b><span>None named in the post</span></div>
+        </div>
+      </div>
+      <div class="h-badge"><span class="badge confirmed">Booked / Confirmed</span></div>
+    </div>
+
+    <div class="history-row" role="listitem">
+      <div class="h-date">Thu, Oct 29<span>2026</span></div>
+      <div class="h-time">7:00 PM</div>
+      <div class="h-main">
+        <div class="h-dir">Sayville → Pines</div>
+        <div class="h-org">Organizer: Andrew Mitchell-Namdar <span class="h-org-tag">· Primary contact</span> · Sayville Ferry · from Sayville</div>
+        <div class="h-detail">Proposed Oct 25 as a Thursday night boat around 7 PM; organizer confirmed Oct 28: “yes confirmed boat from Sayville to the Pines at 7:00 pm.” Anthony West asked about riding the boat’s return leg from the Pines back to Sayville late Thursday, and the organizer invited interest in the commute back.</div>
+        <div class="h-joining">
+          <div class="h-joining-row"><b class="c">Yes</b><span>None named in the post</span></div>
+          <div class="h-joining-row"><b class="m">Maybe</b><span>None named in the post</span></div>
+        </div>
+      </div>
+      <div class="h-badge"><span class="badge confirmed">Booked / Confirmed</span></div>
+    </div>
+
+    <div class="history-row" role="listitem">
+      <div class="h-date">Thu, Oct 29<span>2026</span></div>
+      <div class="h-time">10:00–10:30 PM</div>
+      <div class="h-main">
+        <div class="h-dir">→ Pines</div>
+        <div class="h-org">Organizer: Hal Hayes <span class="h-org-tag">· Primary contact</span></div>
+        <div class="h-detail"><strong>Departure point not stated</strong> in the post. <strong>Connection:</strong> Organizer flying into LaGuardia, landing 8:30 PM; looking for a mainland departure around 10:00–10:30 PM. Austin Allan followed up Oct 28 asking whether the special had been reserved; no confirmation appears in the thread, so whether it was ever booked is unresolved.</div>
+        <div class="h-joining">
+          <div class="h-joining-row"><b class="c">Yes</b><span>None named — booking unconfirmed</span></div>
+          <div class="h-joining-row"><b class="m">Maybe</b><span>None named in the post</span></div>
+        </div>
+      </div>
+      <div class="h-badge"><span class="badge gauging">Gauging interest</span></div>
+    </div>
+
+    <div class="history-row" role="listitem">
+      <div class="h-date">Fri, Oct 30<span>2026</span></div>
+      <div class="h-time">9:30 AM</div>
+      <div class="h-main">
+        <div class="h-dir">Direction not stated</div>
+        <div class="h-org">Organizer: Chad Matthews <span class="h-org-tag">· Primary contact</span></div>
+        <div class="h-detail">Posted Oct 28 asking “Any interest in a special Friday morning at 9:30am?” Direction is not stated in the post and no replies appear, so it is unknown whether the run happened or which way it went.</div>
+        <div class="h-joining">
+          <div class="h-joining-row"><b class="c">Yes</b><span>None named</span></div>
+          <div class="h-joining-row"><b class="m">Maybe</b><span>None named in the post</span></div>
+        </div>
+      </div>
+      <div class="h-badge"><span class="badge gauging">Gauging interest</span></div>
+    </div>
+
+    <div class="history-row" role="listitem">
+      <div class="h-date">Fri, Oct 30<span>2026</span></div>
+      <div class="h-time">6:45 PM</div>
+      <div class="h-main">
+        <div class="h-dir">Sayville → Pines</div>
+        <div class="h-org">Organizer: John Clifford (JC) <span class="h-org-tag">· Primary contact</span> · Sayville Ferry · from Sayville · 3 aboard in total, including the organizer</div>
+        <div class="h-detail"><strong>Connection:</strong> LIRR Montauk branch trains departing Penn Station 5:13 PM and Grand Central 5:07 PM; organizer offered to split a car from the LIRR station to the dock. Reserved Oct 26 and re-confirmed Oct 29 (“A 6:45 PM special from Sayville to Pines is confirmed”). Three on board in total as of Oct 29. Organizer noted there is no regular 7:30 PM ferry anymore.</div>
+        <div class="h-joining">
+          <div class="h-joining-row"><b class="c">Yes</b><span>Michael Hess</span></div>
+          <div class="h-joining-row"><b class="m">Maybe</b><span>None named in the post</span></div>
+        </div>
+      </div>
+      <div class="h-badge"><span class="badge confirmed">Booked / Confirmed</span></div>
+    </div>
+
+    <div class="history-row" role="listitem">
+      <div class="h-date">Fri, Oct 30<span>2026</span></div>
+      <div class="h-time">8:30 PM</div>
+      <div class="h-main">
+        <div class="h-dir">Sayville → Pines</div>
+        <div class="h-org">Organizer: Doreen Katen <span class="h-org-tag">· Primary contact</span> · Sayville Ferry · from Sayville</div>
+        <div class="h-detail">First floated Oct 26 as sharing a Friday evening special “8:30 PM – 9 ish”; organizer stated Oct 28 she would book an 8:30 PM special leaving Sayville, and posted Oct 29 that it was booked (“Friday October 30 8:30PM Special Booked”).</div>
+        <div class="h-joining">
+          <div class="h-joining-row"><b class="c">Yes</b><span>Steven Battaglia, Bill (with Doreen), Todd &amp; Tim</span></div>
+          <div class="h-joining-row"><b class="m">Maybe</b><span>None named in the post</span></div>
+        </div>
+      </div>
+      <div class="h-badge"><span class="badge confirmed">Booked / Confirmed</span></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <strong>Want to propose a new special?</strong><br>
+        Post to the Pines Winter Ferry group with the date, time, and direction — <a href="mailto:pines-winter-ferry@googlegroups.com?subject=Proposed%20special&body=Date%3A%0ATime%3A%0ADirection%3A%20Sayville%20%E2%86%92%20Pines%20%2F%20Pines%20%E2%86%92%20Sayville%0A%0ADetails%3A">pines-winter-ferry@googlegroups.com</a>
+      </div>
+      <div>
+        <strong>How responding works</strong><br>
+        Tapping “Count me in” or “I’m interested” opens an email to the group, pre-filled with the special’s details. Add your name and number of people, then send. Posts to the group are moderated.
+      </div>
+    </div>
+    <section class="disclaimer" id="disclaimer" aria-label="About this page and how to follow the mailing list">
+      <h2>About this page — please read</h2>
+      <p><strong>This page is a community summary, not an operator.</strong> It is compiled by volunteers from posts to the Pines Winter Ferry mailing list. It is <strong>not run by Sayville Ferry, H2O Limo, FIPPOA, or any other boat operator</strong>, and it is not affiliated with or endorsed by any of them. Nothing here is an official schedule, booking, or guarantee from any operator.</p>
+      <p><strong>Each trip is the organizer’s responsibility.</strong> The person named as <strong>Organizer</strong> on each run is that trip’s primary point of contact — they arrange the boat, keep the headcount, set the cost share, and announce any change or cancellation. Questions about a specific trip go to its organizer, through the mailing list. This page only reflects what was posted; if a time or headcount changes on the list, the list is the source of truth.</p>
+      <p><strong>Follow the mailing list directly.</strong> The list is where specials are proposed, confirmed, and changed — this page can lag behind it. To watch the group’s activity, open the group online, visit its page on Google Groups, or subscribe by email so new posts come straight to your inbox.</p>
+      <div class="disclaimer-actions">
+        <a class="btn-mail" href="https://groups.google.com/g/pines-winter-ferry" target="_blank" rel="noopener">View the group on Google Groups ↗</a>
+        <a class="btn-mail secondary" href="mailto:pines-winter-ferry+subscribe@googlegroups.com?subject=Subscribe%20me%20to%20Pines%20Winter%20Ferry&body=Please%20subscribe%20me%20to%20the%20Pines%20Winter%20Ferry%20mailing%20list%20so%20I%20get%20new%20posts%20by%20email.">Subscribe to the list by email</a>
+      </div>
+    </section>
+    <p style="margin-top:18px;font-size:13px">Compiled from Pines Winter Ferry group posts. The upcoming schedule above is read live from the group’s data file each time this page opens. “Who’s in” lists only people who replied saying they were in or interested — Yes vs. Maybe as they stated it; organizers are not counted as riders. If a time or headcount changes on the list, the list is the source of truth.</p>
+  </footer>
+
+</div>
 <script>
-"use strict";
-var FALLBACK = {"runs":[{"connection":null,"date":"2026-11-02","day":"Mon, Nov 2","departure":null,"notes":"Glenn posted: \"I've scheduled a special this Monday Nov 2 at 1:30 to the Pines if anyone wants to join let me know.\" Departure point and provider were not stated in the post. Peter Schwartz replied asking whether it is with Sayville Ferry, and said he might be interested in taking the return trip back.","organizer":"Glenn Rice","provider":null,"riders_maybe":[],"riders_note":null,"riders_yes":[],"route":"→ Pines","status":"confirmed","time":"1:30 PM","subject":"[Pines Winter Ferry] Special to Pines / Monday Nov 2 @ 1:30 PM","departure_note":null},{"connection":"Arrives Ocean Bay Park by 11:50 AM; riders sign up via the headcount form at fippoa.org/election-day-lateral-service","date":"2026-11-03","day":"Tue, Nov 3","departure":null,"notes":"Election Day lateral water taxi service (not a Sayville run). Confirmed Nov 1 by Chris Mai (FIPPOA): a lateral special with SFS from the Pines to Ocean Bay Park for Election Day.","organizer":"Chris Mai (FIPPOA)","provider":null,"riders_maybe":[],"riders_note":"Sign-ups are collected through the FIPPOA headcount form, not by email, so rider names aren't listed here.","riders_yes":[],"route":"Pines → Ocean Bay Park","status":"confirmed","time":"11:30 AM","subject":"[Pines Winter Ferry] 🚨Gauging Interest 🚨 2026 Election Day Lateral Water Taxi Service from The Pines to Ocean Bay Park 🗳️","departure_note":"Lateral service between Fire Island communities — not a mainland run."},{"connection":"Return leg of the Election Day lateral service; sign up via the headcount form at fippoa.org/election-day-lateral-service","date":"2026-11-03","day":"Tue, Nov 3","departure":null,"notes":"Return leg of the Election Day lateral water taxi service (not a Sayville run), confirmed Nov 1 by Chris Mai (FIPPOA) together with the outbound leg.","organizer":"Chris Mai (FIPPOA)","provider":null,"riders_maybe":[],"riders_note":"Sign-ups are collected through the FIPPOA headcount form, not by email, so rider names aren't listed here.","riders_yes":[],"route":"Ocean Bay Park → Pines","status":"confirmed","time":"1:05 PM","subject":"[Pines Winter Ferry] 🚨Gauging Interest 🚨 2026 Election Day Lateral Water Taxi Service from The Pines to Ocean Bay Park 🗳️","departure_note":"Lateral service between Fire Island communities — not a mainland run."}],"updated":"Mon Nov 2, 2026, 1:30 AM EST"};
-
-var HISTORY = [
-  {"day":"Mon, Oct 26","time":"6:40 AM","route":"Pines → Sayville","status":"confirmed","organizer":"John Clifford (JC)","dep":null,"conn":"Connects to LIRR arriving Penn Station or Grand Central at 8:50 AM","yes":[],"maybe":[]},
-  {"day":"Wed, Oct 28","time":"10:30 AM","route":"Pines → Sayville","status":"confirmed","organizer":"Philip Carroll","dep":null,"conn":null,"yes":["Mark Campbell"],"maybe":[]},
-  {"day":"Thu, Oct 29","time":"7:00 PM","route":"Sayville → Pines","status":"confirmed","organizer":"Andrew Mitchell-Namdar","dep":"Sayville · Sayville Ferry","conn":null,"yes":[],"maybe":[]},
-  {"day":"Thu, Oct 29","time":"10:00–10:30 PM","route":"→ Pines","status":"gauging","organizer":"Hal Hayes","dep":"Departure point not stated in the post","conn":"Organizer flying into LaGuardia, landing 8:30 PM","yes":[],"maybe":[]},
-  {"day":"Fri, Oct 30","time":"9:30 AM","route":"Direction not stated","status":"gauging","organizer":"Chad Matthews","dep":"Departure point not stated in the post","conn":null,"yes":[],"maybe":[]},
-  {"day":"Fri, Oct 30","time":"6:45 PM","route":"Sayville → Pines","status":"confirmed","organizer":"John Clifford (JC)","dep":"Sayville · Sayville Ferry","conn":"Three on board in total, per the organizer","yes":["Michael Hess"],"maybe":[]},
-  {"day":"Fri, Oct 30","time":"8:30 PM","route":"Sayville → Pines","status":"confirmed","organizer":"Doreen Katen","dep":"Sayville · Sayville Ferry","conn":null,"yes":["Steven Battaglia","Bill (with Doreen)","Todd & Tim"],"maybe":[]}
-];
-
-var currentFilter = "all";
-var currentData = FALLBACK;
-
-function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
-function initials(name){var p=name.replace(/[()]/g,"").split(/\s+/).filter(Boolean);if(!p.length)return "?";return (p[0][0]+(p.length>1?p[p.length-1][0]:"")).toUpperCase();}
-function badge(status){return status==="confirmed"?'<span class="badge confirmed">Booked / Confirmed</span>':'<span class="badge gauging">Gauging interest</span>';}
-function chips(list){return list.map(function(n){return '<span class="chip"><span class="ini">'+esc(initials(n))+'</span>'+esc(n)+'</span>';}).join("");}
-function whoHTML(r){
-  var out = "";
-  if(r.riders_note){ out += '<div class="ridersnote">'+esc(r.riders_note)+"</div>"; }
-  var yes = r.riders_yes||[], maybe = r.riders_maybe||[];
-  if(yes.length){ out += '<div class="who"><span class="lbl">Yes</span><div class="chips">'+chips(yes)+"</div></div>"; }
-  if(maybe.length){ out += '<div class="who"><span class="lbl">Maybe</span><div class="chips">'+chips(maybe)+"</div></div>"; }
-  if(!yes.length && !maybe.length && !r.riders_note){ out += '<div class="ridersnote">0 in so far</div>'; }
-  return out;
-}
-function depHTML(r){
-  if(r.departure_note){ return '<div class="dep">'+esc(r.departure_note)+"</div>"; }
-  if(r.departure || r.provider){
-    var parts=[]; if(r.departure)parts.push(esc(r.departure)); if(r.provider)parts.push(esc(r.provider));
-    return '<div class="dep">Departs '+parts.join(" · ")+"</div>";
-  }
-  return '<div class="dep">Departure point not stated in the post — could be Sayville (Sayville Ferry) or Blue Point (H2O Limo).</div>';
-}
-function dateParts(r){
-  var dow = (r.day||"").split(",")[0]||"";
-  var m = /(\d{4})-(\d{2})-(\d{2})/.exec(r.date||"");
-  var mon = "", num = "";
-  if(m){ var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]; mon = months[parseInt(m[2],10)-1]; num = String(parseInt(m[3],10)); }
-  return {dow:dow, mon:mon, num:num};
-}
-function isFippoa(r){ return /fippoa\.org/.test(r.connection||"") || /FIPPOA/.test(r.organizer||""); }
-function cardHTML(r){
-  var dp = dateParts(r);
-  var btn;
-  if(isFippoa(r)){
-    btn = '<a class="btn form" href="https://fippoa.org/election-day-lateral-service">Sign up via the FIPPOA headcount form</a>';
-  } else {
-    var label = r.status==="confirmed" ? "Count me in" : "I’m interested";
-    var href = "mailto:pines-winter-ferry@googlegroups.com?subject="+encodeURIComponent("Re: "+(r.subject||""));
-    btn = '<a class="btn" href="'+href+'">'+label+"</a>";
-  }
-  return '<div class="card" data-status="'+esc(r.status)+'">'
-    + '<div class="datebox"><div class="dow">'+esc(dp.dow)+'</div><div class="dnum">'+esc(dp.num)+'</div><div class="mon">'+esc(dp.mon)+"</div></div>"
-    + '<div class="cardbody">'
-    + '<div class="timerow"><span class="time">'+esc(r.time)+'</span><span class="route">'+esc(r.route)+"</span>"+badge(r.status)+"</div>"
-    + '<div class="org">'+esc(r.organizer)+'<span class="tag">Primary contact</span></div>'
-    + depHTML(r)
-    + (r.connection ? '<div class="conn">'+esc(r.connection)+"</div>" : "")
-    + (r.notes ? '<div class="notes">'+esc(r.notes)+"</div>" : "")
-    + whoHTML(r)
-    + btn
-    + "</div></div>";
-}
-function historyHTML(h){
-  var dparts = (h.day||"").split(", ");
-  return '<div class="card"><div class="cardbody">'
-    + '<div class="timerow"><span class="time">'+esc(h.day)+" · "+esc(h.time)+'</span><span class="route">'+esc(h.route)+"</span>"+badge(h.status)+"</div>"
-    + '<div class="org">'+esc(h.organizer)+'<span class="tag">Primary contact</span></div>'
-    + (h.dep ? '<div class="dep">'+esc(h.dep)+"</div>" : "")
-    + (h.conn ? '<div class="conn">'+esc(h.conn)+"</div>" : "")
-    + ((h.yes&&h.yes.length)?'<div class="who"><span class="lbl">Yes</span><div class="chips">'+chips(h.yes)+"</div></div>":"")
-    + ((h.maybe&&h.maybe.length)?'<div class="who"><span class="lbl">Maybe</span><div class="chips">'+chips(h.maybe)+"</div></div>":"")
-    + "</div></div>";
-}
-function rangeLabel(runs){
-  if(!runs.length) return "";
-  function f(dstr){ var m=/(\d{4})-(\d{2})-(\d{2})/.exec(dstr); if(!m) return dstr; var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]; return months[parseInt(m[2],10)-1]+" "+parseInt(m[3],10); }
-  var a=f(runs[0].date), b=f(runs[runs.length-1].date);
-  return (a===b?a:a+" – "+b)+" · "+runs.length+(runs.length===1?" run":" runs");
-}
-function render(data, live){
-  currentData = data;
-  document.getElementById("stamp").textContent = "Postings as of "+(data.updated||"");
-  document.getElementById("livedot").className = "dot"+(live?" live":"");
-  document.getElementById("countline").textContent = rangeLabel(data.runs||[]);
-  applyFilter();
-  document.getElementById("history").innerHTML = HISTORY.map(historyHTML).join("");
-}
-function applyFilter(){
-  var runs = (currentData.runs||[]).filter(function(r){ return currentFilter==="all" || r.status===currentFilter; });
-  document.getElementById("runs").innerHTML = runs.length ? runs.map(cardHTML).join("") : '<p class="countline">No runs in this category right now.</p>';
-}
-document.getElementById("filters").addEventListener("click", function(e){
-  if(e.target.tagName!=="BUTTON") return;
-  currentFilter = e.target.getAttribute("data-f");
-  var btns = this.querySelectorAll("button");
-  for(var i=0;i<btns.length;i++){ btns[i].className = btns[i]===e.target ? "on" : ""; }
-  applyFilter();
-});
-/* Snowflakes in the header */
 (function(){
-  var header = document.querySelector("header");
-  for(var i=0;i<26;i++){
-    var s = document.createElement("span");
-    s.className = "flake"; s.textContent = "❄";
-    s.style.left = (Math.random()*100)+"%";
-    s.style.fontSize = (8+Math.random()*12)+"px";
-    s.style.animationDuration = (5+Math.random()*7)+"s";
-    s.style.animationDelay = (-Math.random()*8)+"s";
-    header.appendChild(s);
+  "use strict";
+  var DATA_URL = "specials.json";
+  var FALLBACK = {"runs": [{"connection": null, "date": "2026-11-02", "day": "Mon, Nov 2", "departure": null, "notes": "Glenn posted: \"I've scheduled a special this Monday Nov 2 at 1:30 to the Pines if anyone wants to join let me know.\" Departure point and provider were not stated in the post. Peter Schwartz replied asking whether it is with Sayville Ferry, and said he might be interested in taking the return trip back.", "organizer": "Glenn Rice", "provider": null, "riders_maybe": [], "riders_note": null, "riders_yes": [], "route": "→ Pines", "status": "confirmed", "time": "1:30 PM", "subject": "[Pines Winter Ferry] Special to Pines / Monday Nov 2 @ 1:30 PM", "departure_note": null}, {"connection": "Arrives Ocean Bay Park by 11:50 AM; riders sign up via the headcount form at fippoa.org/election-day-lateral-service", "date": "2026-11-03", "day": "Tue, Nov 3", "departure": null, "notes": "Election Day lateral water taxi service (not a Sayville run). Confirmed Nov 1 by Chris Mai (FIPPOA): a lateral special with SFS from the Pines to Ocean Bay Park for Election Day.", "organizer": "Chris Mai (FIPPOA)", "provider": null, "riders_maybe": [], "riders_note": "Sign-ups are collected through the FIPPOA headcount form, not by email, so rider names aren't listed here.", "riders_yes": [], "route": "Pines → Ocean Bay Park", "status": "confirmed", "time": "11:30 AM", "subject": "[Pines Winter Ferry] 🚨Gauging Interest 🚨 2026 Election Day Lateral Water Taxi Service from The Pines to Ocean Bay Park 🗳️", "departure_note": "Lateral service between Fire Island communities — not a mainland run."}, {"connection": "Return leg of the Election Day lateral service; sign up via the headcount form at fippoa.org/election-day-lateral-service", "date": "2026-11-03", "day": "Tue, Nov 3", "departure": null, "notes": "Return leg of the Election Day lateral water taxi service (not a Sayville run), confirmed Nov 1 by Chris Mai (FIPPOA) together with the outbound leg.", "organizer": "Chris Mai (FIPPOA)", "provider": null, "riders_maybe": [], "riders_note": "Sign-ups are collected through the FIPPOA headcount form, not by email, so rider names aren't listed here.", "riders_yes": [], "route": "Ocean Bay Park → Pines", "status": "confirmed", "time": "1:05 PM", "subject": "[Pines Winter Ferry] 🚨Gauging Interest 🚨 2026 Election Day Lateral Water Taxi Service from The Pines to Ocean Bay Park 🗳️", "departure_note": "Lateral service between Fire Island communities — not a mainland run."}], "updated": "Mon Nov 2, 2026, 1:39 AM EST"};
+  var GROUP_EMAIL = "pines-winter-ferry@googlegroups.com";
+  var FORM_URL = "https://fippoa.org/election-day-lateral-service";
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var DOWS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+  function esc(s){
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function parseDate(s){
+    var p = String(s).split("-");
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+  function timeMinutes(t){
+    var m = String(t).match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+    if(!m) return 0;
+    var h = (+m[1]) % 12;
+    if(/pm/i.test(m[3])) h += 12;
+    return h * 60 + (+m[2]);
+  }
+  function initials(name){
+    var clean = String(name).replace(/\([^)]*\)/g, " ").trim();
+    var words = clean.split(/\s+/).filter(function(w){ return /[A-Za-z]/.test(w); });
+    if(!words.length){
+      var paren = String(name).match(/\(([A-Za-z]+)\)/);
+      return paren ? paren[1].slice(0, 2).toUpperCase() : "?";
+    }
+    var a = words[0].charAt(0);
+    var b = words.length > 1 ? words[words.length - 1].charAt(0) : "";
+    return (a + b).toUpperCase();
+  }
+  function providerDeparture(run){
+    var prov = run.provider || null, dep = run.departure || null;
+    if(prov && !dep){
+      if(/sayville ferry/i.test(prov)) dep = "Sayville";
+      else if(/h2o/i.test(prov)) dep = "Blue Point";
+    }
+    if(dep && !prov){
+      if(/^sayville$/i.test(dep)) prov = "Sayville Ferry";
+      else if(/^blue point$/i.test(dep)) prov = "H2O Limo";
+    }
+    return { provider: prov, departure: dep };
+  }
+  function routeHTML(route){
+    var arrow = '<span class="arrow" aria-hidden="true">→</span>';
+    var parts = String(route).split("→").map(function(x){ return x.trim(); });
+    if(parts.length === 1) return esc(parts[0]);
+    if(parts[0] === "") return arrow + " " + esc(parts.slice(1).join(" → "));
+    return parts.map(function(p){ return esc(p); }).join(" " + arrow + " ");
+  }
+  function routeText(route){
+    var r = String(route).trim();
+    if(r.charAt(0) === "→"){
+      var dest = r.replace(/^→\s*/, "");
+      return "to " + (/^the\s/i.test(dest) ? "" : "the ") + dest;
+    }
+    return r;
+  }
+  function mailtoFor(run, pd){
+    var d = parseDate(run.date);
+    var longDate = DOWS[d.getDay()] + ", " + MONTHS[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+    var isConf = run.status === "confirmed";
+    var subject = run.subject
+      ? "Re: " + run.subject
+      : "Re: [Pines Winter Ferry] Special";
+    var depClause = pd.departure
+      ? "; departs " + pd.departure + (pd.provider ? " with " + pd.provider : "")
+      : (run.departure_note ? "; " + String(run.departure_note).replace(/\.$/, "") : "; departure point not stated");
+    var body = (isConf ? "Count me in for this special." : "I’m interested in this special.") + "\n" +
+      "Special: " + longDate + " at " + run.time + ", " + routeText(run.route) +
+      " (organizer: " + run.organizer + depClause + ").\n\nName:\nNumber of people:";
+    return "mailto:" + GROUP_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  }
+  function chips(names, maybe){
+    return names.map(function(n){
+      return '<span class="person' + (maybe ? " maybe-person" : "") + '"><span class="avatar" aria-hidden="true">' +
+        esc(initials(n)) + "</span> " + esc(n) + "</span>";
+    }).join("");
+  }
+  function joiningHTML(run){
+    var yes = run.riders_yes || [], maybe = run.riders_maybe || [], note = run.riders_note || null;
+    var titleRight, yesBody, maybeBody;
+    if(note) titleRight = "Via FIPPOA form";
+    else if(!yes.length && !maybe.length) titleRight = "No riders named yet";
+    else titleRight = yes.length + " yes · " + maybe.length + (maybe.length === 1 ? " maybe" : " maybes");
+    if(yes.length) yesBody = '<div class="people">' + chips(yes, false) + "</div>";
+    else if(note) yesBody = '<p class="join-empty">' + esc(note) + "</p>";
+    else if(maybe.length) yesBody = '<p class="join-empty"><strong>No yes riders yet</strong> — no one has replied saying they’re in.</p>';
+    else yesBody = '<p class="join-empty"><strong>No riders named yet</strong> — no one has replied to this post yet. Be the first to reply.</p>';
+    if(maybe.length) maybeBody = '<div class="people">' + chips(maybe, true) + "</div>";
+    else maybeBody = '<p class="join-empty">' + (note ? "No maybes named on the list yet." : "No maybes yet.") + "</p>";
+    return '<div class="joining" aria-label="Who is in">' +
+      '<div class="joining-title"><span>Who’s in</span><span>' + esc(titleRight) + "</span></div>" +
+      '<div class="join-group"><div class="join-label confirmed"><i aria-hidden="true"></i> Yes <span class="n">— said they’re in</span></div>' + yesBody + "</div>" +
+      '<div class="join-group"><div class="join-label maybe"><i aria-hidden="true"></i> Maybe <span class="n">— interested, not firm</span></div>' + maybeBody + "</div>" +
+      "</div>";
+  }
+  function linkify(s){
+    return esc(s).replace(/fippoa\.org\/election-day-lateral-service/g,
+      '<a href="' + FORM_URL + '" target="_blank" rel="noopener">fippoa.org/election-day-lateral-service</a>');
+  }
+  function connectionHTML(text){
+    var icon = /^arrives/i.test(text) ? "🕚" : "🕐";
+    var cut = text.search(/[;.]\s/);
+    var head = cut > 0 ? text.slice(0, cut + 1).replace(/;$/, ".") : text;
+    var rest = cut > 0 ? text.slice(cut + 2) : "";
+    return '<div class="connection"><span aria-hidden="true">' + icon + "</span><div><strong>" +
+      linkify(head) + "</strong>" + (rest ? " " + linkify(rest) : "") + "</div></div>";
+  }
+  function cardHTML(run){
+    var d = parseDate(run.date);
+    var isConf = run.status === "confirmed";
+    var badge = isConf
+      ? '<span class="badge confirmed">Booked / Confirmed</span>'
+      : '<span class="badge gauging">Gauging interest</span>';
+    var tp = String(run.time).trim().split(/\s+/);
+    var tSmall = tp.length > 1 ? tp[tp.length - 1] : "";
+    var tMain = tp.length > 1 ? tp.slice(0, tp.length - 1).join(" ") : run.time;
+    var pd = providerDeparture(run);
+    var orgSuffix = /election day/i.test((run.notes || "") + " " + (run.connection || "")) ? " · Election Day" : "";
+    var depBlock;
+    if(run.departure_note){
+      depBlock = '<div class="departure-note"><span aria-hidden="true">📍</span><div>' +
+        esc(run.departure_note) + "</div></div>";
+    } else if(pd.departure){
+      depBlock = '<div class="departure-note"><span aria-hidden="true">📍</span><div><strong>Departs from ' +
+        esc(pd.departure) + "</strong>" + (pd.provider ? " — " + esc(pd.provider) + "." : ".") + "</div></div>";
+    } else {
+      depBlock = '<div class="departure-note"><span aria-hidden="true">📍</span><div><strong>Departure point not stated</strong> in the post — could be Sayville (Sayville Ferry) or Blue Point (H2O Limo).</div></div>';
+    }
+    var usesForm = /fippoa\.org/i.test(run.connection || "") || /FIPPOA headcount form/i.test(run.riders_note || "");
+    var actions;
+    if(usesForm){
+      actions = '<a class="btn btn-primary" href="' + FORM_URL + '" target="_blank" rel="noopener">FIPPOA headcount form ↗</a>' +
+        '<a class="btn btn-secondary" href="' + mailtoFor(run, pd) + '">✉&nbsp; Count me in — by email</a>';
+    } else if(isConf){
+      actions = '<a class="btn btn-primary" href="' + mailtoFor(run, pd) + '">✉&nbsp; Count me in</a>' +
+        '<p class="btn-note">Opens an email to ' + GROUP_EMAIL + " in this thread.</p>";
+    } else {
+      actions = '<a class="btn btn-accent" href="' + mailtoFor(run, pd) + '">✉&nbsp; I’m interested</a>' +
+        '<p class="btn-note">Opens an email to ' + GROUP_EMAIL + " in this thread.</p>";
+    }
+    return '<article class="card" data-status="' + esc(run.status) + '">' +
+      '<div class="card-top"><div class="date-box" aria-hidden="true"><div class="dow">' + DOW[d.getDay()] +
+      '</div><div class="day">' + d.getDate() + '</div><div class="mon">' + MON[d.getMonth()] + "</div></div>" +
+      '<div class="card-head"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap"><div class="time">' +
+      esc(tMain) + (tSmall ? " <small>" + esc(tSmall) + "</small>" : "") + "</div>" + badge + "</div>" +
+      '<div class="direction">' + routeHTML(run.route) + "</div>" +
+      '<div class="organizer">Organizer: <strong>' + esc(run.organizer) + '</strong><span class="organizer-tag">Primary contact</span>' + orgSuffix + "</div></div></div>" +
+      (run.connection ? connectionHTML(run.connection) : "") +
+      (run.notes ? '<p class="notes">' + esc(run.notes) + "</p>" : "") +
+      depBlock +
+      joiningHTML(run) +
+      '<div class="card-actions">' + actions + "</div></article>";
+  }
+
+  var currentFilter = "all";
+  function applyFilter(){
+    var cards = document.querySelectorAll("#upcomingCards .card");
+    var visible = 0;
+    cards.forEach(function(card){
+      var show = currentFilter === "all" || card.getAttribute("data-status") === currentFilter;
+      card.classList.toggle("hidden-by-filter", !show);
+      if(show) visible++;
+    });
+    document.getElementById("emptyFilter").classList.toggle("show", visible === 0 && cards.length > 0);
+  }
+  function render(data, live){
+    var runs = (data.runs || []).slice().sort(function(a, b){
+      if(a.date !== b.date) return a.date < b.date ? -1 : 1;
+      return timeMinutes(a.time) - timeMinutes(b.time);
+    });
+    var wrap = document.getElementById("upcomingCards");
+    if(runs.length){
+      wrap.innerHTML = runs.map(cardHTML).join("");
+    } else {
+      wrap.innerHTML = '<div class="no-runs">No specials are posted for the coming days right now — propose one on the mailing list, below.</div>';
+    }
+    var label = "No runs posted";
+    if(runs.length){
+      var first = parseDate(runs[0].date), last = parseDate(runs[runs.length - 1].date);
+      var range;
+      if(runs[0].date === runs[runs.length - 1].date){
+        range = MON[first.getMonth()] + " " + first.getDate();
+      } else if(first.getMonth() === last.getMonth() && first.getFullYear() === last.getFullYear()){
+        range = MON[first.getMonth()] + " " + first.getDate() + " – " + MON[last.getMonth()] + " " + last.getDate();
+      } else {
+        range = MON[first.getMonth()] + " " + first.getDate() + " – " + MON[last.getMonth()] + " " + last.getDate();
+      }
+      label = range + " · " + runs.length + (runs.length === 1 ? " run" : " runs");
+    }
+    document.getElementById("runCount").textContent = label;
+    if(data.updated) document.getElementById("updatedStamp").textContent = data.updated;
+    document.getElementById("liveDot").classList.toggle("stale", !live);
+    applyFilter();
+  }
+
+  var buttons = document.querySelectorAll(".filter-btn");
+  buttons.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      buttons.forEach(function(b){ b.setAttribute("aria-pressed", "false"); });
+      btn.setAttribute("aria-pressed", "true");
+      currentFilter = btn.getAttribute("data-filter");
+      applyFilter();
+    });
+  });
+
+  render(FALLBACK, false);
+  /* Load the live schedule from the group's data file, which is hosted
+     alongside this page (same site, same origin). The first copy that
+     arrives and validates replaces the saved copy and turns the dot
+     green; if the load fails, the saved copy stays with the amber dot. */
+  function validData(d){ return d && Array.isArray(d.runs) ? d : null; }
+  function fetchJSON(url){
+    return fetch(url, { cache: "no-store" }).then(function(r){
+      if(!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    });
+  }
+  function fromRaw(){
+    return fetchJSON(DATA_URL + "?t=" + Date.now()).then(validData);
+  }
+  function attempt(sources){
+    if(!sources.length) return;
+    sources[0]().then(function(data){
+      if(data) render(data, true);
+      else attempt(sources.slice(1));
+    }).catch(function(){ attempt(sources.slice(1)); });
+  }
+  if(window.fetch){
+    attempt([fromRaw, fromRaw]);
   }
 })();
-/* Load the live data file (same directory as this page); fall back to the baked-in copy */
-render(FALLBACK, false);
-fetch("specials.json", {cache:"no-store"})
-  .then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); })
-  .then(function(d){ if(d && Object.prototype.toString.call(d.runs)==="[object Array]"){ render(d, true); } })
-  .catch(function(){ /* keep the fallback render with the amber dot */ });
 </script>
 </body>
 </html>
