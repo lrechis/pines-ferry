@@ -69,7 +69,24 @@
       "riders_maybe": [],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Gauging interest - FIP —> Sayville 11/5"
+    },
+    {
+      "date": "2026-11-05",
+      "day": "Thu, Nov 5",
+      "time": "7:00 PM",
+      "route": "Sayville → Pines",
+      "status": "gauging",
+      "organizer": "Mike Koessel",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": null,
+      "notes": "Mike Koessel posted Nov 2 gauging interest in sharing a special ferry from Sayville to the Pines on Thursday Nov 5 at 7 pm. (Flexible on time)",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Gauging interest for Sayville ferry special on Thursday eve"
     }
   ],
-  "updated": "Mon Nov 2, 2026, 8:45 AM EST"
+  "updated": "Mon Nov 2, 2026, 11:15 AM EST"
 }
