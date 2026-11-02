@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pines Winter Ferry Specials</title>
+<style>
+  :root{
+    --ink:#16324a; --ink2:#3d5a73; --bg:#eef4f8; --card:#ffffff;
+    --line:#d7e3ec; --green:#1e7d46; --greenbg:#e2f3e8; --amber:#a86a00; --amberbg:#fdf0d3;
+    --chip:#eef4f8; --accent:#0f5d8f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+  header{background:linear-gradient(160deg,#0d2f47,#17557e);color:#fff;padding:34px 18px 26px;text-align:center;position:relative;overflow:hidden}
+  header .route{letter-spacing:.14em;text-transform:uppercase;font-size:12px;opacity:.85}
+  header h1{margin:8px 0 6px;font-size:32px;line-height:1.15}
+  header p.sub{margin:0 auto;max-width:640px;font-size:15px;opacity:.92}
+  .flake{position:absolute;top:-10%;color:#fff;opacity:.8;animation:fall linear infinite;pointer-events:none}
+  @keyframes fall{to{transform:translateY(320px)}}
+  main{max-width:860px;margin:0 auto;padding:18px 14px 40px}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13.5px;margin:14px 0 4px}
+  .dot{width:10px;height:10px;border-radius:50%;background:#c9a227;flex:none}
+  .dot.live{background:#2ea36b}
+  .legend{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:12px 0 20px}
+  h2{font-size:20px;margin:22px 0 4px}
+  .countline{color:var(--ink2);font-size:14px;margin:0 0 12px}
+  .filters{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+  .filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;font-size:13.5px;cursor:pointer}
+  .filters button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px;display:flex;gap:16px}
+  .datebox{flex:none;width:64px;text-align:center;background:var(--chip);border-radius:10px;padding:8px 4px;height:fit-content}
+  .datebox .dow{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2)}
+  .datebox .dnum{font-size:24px;font-weight:700;line-height:1.1}
+  .datebox .mon{font-size:12px;color:var(--ink2)}
+  .cardbody{flex:1;min-width:0}
+  .timerow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .time{font-size:18px;font-weight:700}
+  .route{font-size:16px}
+  .badge{font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:999px;text-transform:uppercase}
+  .badge.confirmed{background:var(--greenbg);color:var(--green)}
+  .badge.gauging{background:var(--amberbg);color:var(--amber)}
+  .org{margin-top:6px;font-size:14.5px}
+  .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;background:var(--chip);border:1px solid var(--line);color:var(--ink2);border-radius:999px;padding:2px 8px;margin-left:8px;vertical-align:middle;text-transform:uppercase}
+  .dep{margin-top:4px;font-size:13.5px;color:var(--ink2)}
+  .notes{margin-top:8px;font-size:14px;color:var(--ink)}
+  .conn{margin-top:6px;font-size:13.5px;color:var(--ink2)}
+  .who{margin-top:10px;font-size:14px}
+  .who .lbl{font-weight:700}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+  .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:13px}
+  .chip .ini{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:10.5px;font-weight:700;margin-right:6px;vertical-align:-5px}
+  .ridersnote{font-size:13.5px;color:var(--ink2);margin-top:6px}
+  .btn{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;padding:9px 16px;border-radius:10px}
+  .btn.form{background:#fff;color:var(--accent);border:1.5px solid var(--accent)}
+  .history .card{padding:12px 16px}
+  .about{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:14px;color:var(--ink2);margin-top:26px}
+  .about h3{margin:0 0 8px;color:var(--ink);font-size:16px}
+  .about a{color:var(--accent)}
+  footer{text-align:center;color:var(--ink2);font-size:12.5px;padding:0 16px 30px}
+  @media (max-width:560px){ .card{flex-direction:column} .datebox{width:100%;display:flex;gap:8px;align-items:baseline;justify-content:center} }
+</style>
+</head>
+<body>
+<header>
+  <div class="route">Long Island — Fire Island Pines</div>
+  <h1>Pines Winter Ferry Specials</h1>
+  <p class="sub">Off-schedule charter boats between Fire Island Pines and the mainland, coordinated on the Pines Winter Ferry mailing list</p>
+</header>
+<main>
+  <span class="pill"><span class="dot" id="livedot"></span><span id="stamp">Postings as of …</span></span>
+
+  <div class="legend">Typically two providers run specials: Sayville Ferry (from Sayville) and H2O Limo (usually from Blue Point). A provider and departure point is shown only when the organizer states it.</div>
+
+  <h2>Coming up</h2>
+  <p class="countline" id="countline"></p>
+  <div class="filters" id="filters">
+    <button data-f="all" class="on">All</button>
+    <button data-f="confirmed">Booked / Confirmed</button>
+    <button data-f="gauging">Gauging interest</button>
+  </div>
+  <div id="runs"></div>
+
+  <h2>Earlier this week</h2>
+  <div id="history" class="history"></div>
+
+  <div class="about" id="disclaimer">
+    <h3>About this page — please read</h3>
+    <p>This page is a volunteer-compiled community summary of posts to the Pines Winter Ferry mailing list. It is <strong>not run by Sayville Ferry, H2O Limo, FIPPOA, or any other boat operator</strong>, and it is not affiliated with or endorsed by any of them.</p>
+    <p>Each trip is the responsibility of its named organizer, who is the primary point of contact for booking, headcount, cost share, and any change or cancellation.</p>
+    <p><a href="https://groups.google.com/g/pines-winter-ferry">View the group on Google Groups</a> · <a href="mailto:pines-winter-ferry+subscribe@googlegroups.com">Subscribe to the list by email</a></p>
+  </div>
+</main>
+<footer>This page reads its schedule from a small data file that is updated as new specials are posted to the mailing list.</footer>
+
+<script>
+"use strict";
+var FALLBACK = {"runs":[{"connection":null,"date":"2026-11-02","day":"Mon, Nov 2","departure":null,"notes":"Glenn posted: \"I've scheduled a special this Monday Nov 2 at 1:30 to the Pines if anyone wants to join let me know.\" Departure point and provider were not stated in the post. Peter Schwartz replied asking whether it is with Sayville Ferry, and said he might be interested in taking the return trip back.","organizer":"Glenn Rice","provider":null,"riders_maybe":[],"riders_note":null,"riders_yes":[],"route":"→ Pines","status":"confirmed","time":"1:30 PM","subject":"[Pines Winter Ferry] Special to Pines / Monday Nov 2 @ 1:30 PM","departure_note":null},{"connection":"Arrives Ocean Bay Park by 11:50 AM; riders sign up via the headcount form at fippoa.org/election-day-lateral-service","date":"2026-11-03","day":"Tue, Nov 3","departure":null,"notes":"Election Day lateral water taxi service (not a Sayville run). Confirmed Nov 1 by Chris Mai (FIPPOA): a lateral special with SFS from the Pines to Ocean Bay Park for Election Day.","organizer":"Chris Mai (FIPPOA)","provider":null,"riders_maybe":[],"riders_note":"Sign-ups are collected through the FIPPOA headcount form, not by email, so rider names aren't listed here.","riders_yes":[],"route":"Pines → Ocean Bay Park","status":"confirmed","time":"11:30 AM","subject":"[Pines Winter Ferry] 🚨Gauging Interest 🚨 2026 Election Day Lateral Water Taxi Service from The Pines to Ocean Bay Park 🗳️","departure_note":"Lateral service between Fire Island communities — not a mainland run."},{"connection":"Return leg of the Election Day lateral service; sign up via the headcount form at fippoa.org/election-day-lateral-service","date":"2026-11-03","day":"Tue, Nov 3","departure":null,"notes":"Return leg of the Election Day lateral water taxi service (not a Sayville run), confirmed Nov 1 by Chris Mai (FIPPOA) together with the outbound leg.","organizer":"Chris Mai (FIPPOA)","provider":null,"riders_maybe":[],"riders_note":"Sign-ups are collected through the FIPPOA headcount form, not by email, so rider names aren't listed here.","riders_yes":[],"route":"Ocean Bay Park → Pines","status":"confirmed","time":"1:05 PM","subject":"[Pines Winter Ferry] 🚨Gauging Interest 🚨 2026 Election Day Lateral Water Taxi Service from The Pines to Ocean Bay Park 🗳️","departure_note":"Lateral service between Fire Island communities — not a mainland run."}],"updated":"Mon Nov 2, 2026, 1:30 AM EST"};
+
+var HISTORY = [
+  {"day":"Mon, Oct 26","time":"6:40 AM","route":"Pines → Sayville","status":"confirmed","organizer":"John Clifford (JC)","dep":null,"conn":"Connects to LIRR arriving Penn Station or Grand Central at 8:50 AM","yes":[],"maybe":[]},
+  {"day":"Wed, Oct 28","time":"10:30 AM","route":"Pines → Sayville","status":"confirmed","organizer":"Philip Carroll","dep":null,"conn":null,"yes":["Mark Campbell"],"maybe":[]},
+  {"day":"Thu, Oct 29","time":"7:00 PM","route":"Sayville → Pines","status":"confirmed","organizer":"Andrew Mitchell-Namdar","dep":"Sayville · Sayville Ferry","conn":null,"yes":[],"maybe":[]},
+  {"day":"Thu, Oct 29","time":"10:00–10:30 PM","route":"→ Pines","status":"gauging","organizer":"Hal Hayes","dep":"Departure point not stated in the post","conn":"Organizer flying into LaGuardia, landing 8:30 PM","yes":[],"maybe":[]},
+  {"day":"Fri, Oct 30","time":"9:30 AM","route":"Direction not stated","status":"gauging","organizer":"Chad Matthews","dep":"Departure point not stated in the post","conn":null,"yes":[],"maybe":[]},
+  {"day":"Fri, Oct 30","time":"6:45 PM","route":"Sayville → Pines","status":"confirmed","organizer":"John Clifford (JC)","dep":"Sayville · Sayville Ferry","conn":"Three on board in total, per the organizer","yes":["Michael Hess"],"maybe":[]},
+  {"day":"Fri, Oct 30","time":"8:30 PM","route":"Sayville → Pines","status":"confirmed","organizer":"Doreen Katen","dep":"Sayville · Sayville Ferry","conn":null,"yes":["Steven Battaglia","Bill (with Doreen)","Todd & Tim"],"maybe":[]}
+];
+
+var currentFilter = "all";
+var currentData = FALLBACK;
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function initials(name){var p=name.replace(/[()]/g,"").split(/\s+/).filter(Boolean);if(!p.length)return "?";return (p[0][0]+(p.length>1?p[p.length-1][0]:"")).toUpperCase();}
+function badge(status){return status==="confirmed"?'<span class="badge confirmed">Booked / Confirmed</span>':'<span class="badge gauging">Gauging interest</span>';}
+function chips(list){return list.map(function(n){return '<span class="chip"><span class="ini">'+esc(initials(n))+'</span>'+esc(n)+'</span>';}).join("");}
+function whoHTML(r){
+  var out = "";
+  if(r.riders_note){ out += '<div class="ridersnote">'+esc(r.riders_note)+"</div>"; }
+  var yes = r.riders_yes||[], maybe = r.riders_maybe||[];
+  if(yes.length){ out += '<div class="who"><span class="lbl">Yes</span><div class="chips">'+chips(yes)+"</div></div>"; }
+  if(maybe.length){ out += '<div class="who"><span class="lbl">Maybe</span><div class="chips">'+chips(maybe)+"</div></div>"; }
+  if(!yes.length && !maybe.length && !r.riders_note){ out += '<div class="ridersnote">0 in so far</div>'; }
+  return out;
+}
+function depHTML(r){
+  if(r.departure_note){ return '<div class="dep">'+esc(r.departure_note)+"</div>"; }
+  if(r.departure || r.provider){
+    var parts=[]; if(r.departure)parts.push(esc(r.departure)); if(r.provider)parts.push(esc(r.provider));
+    return '<div class="dep">Departs '+parts.join(" · ")+"</div>";
+  }
+  return '<div class="dep">Departure point not stated in the post — could be Sayville (Sayville Ferry) or Blue Point (H2O Limo).</div>';
+}
+function dateParts(r){
+  var dow = (r.day||"").split(",")[0]||"";
+  var m = /(\d{4})-(\d{2})-(\d{2})/.exec(r.date||"");
+  var mon = "", num = "";
+  if(m){ var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]; mon = months[parseInt(m[2],10)-1]; num = String(parseInt(m[3],10)); }
+  return {dow:dow, mon:mon, num:num};
+}
+function isFippoa(r){ return /fippoa\.org/.test(r.connection||"") || /FIPPOA/.test(r.organizer||""); }
+function cardHTML(r){
+  var dp = dateParts(r);
+  var btn;
+  if(isFippoa(r)){
+    btn = '<a class="btn form" href="https://fippoa.org/election-day-lateral-service">Sign up via the FIPPOA headcount form</a>';
+  } else {
+    var label = r.status==="confirmed" ? "Count me in" : "I’m interested";
+    var href = "mailto:pines-winter-ferry@googlegroups.com?subject="+encodeURIComponent("Re: "+(r.subject||""));
+    btn = '<a class="btn" href="'+href+'">'+label+"</a>";
+  }
+  return '<div class="card" data-status="'+esc(r.status)+'">'
+    + '<div class="datebox"><div class="dow">'+esc(dp.dow)+'</div><div class="dnum">'+esc(dp.num)+'</div><div class="mon">'+esc(dp.mon)+"</div></div>"
+    + '<div class="cardbody">'
+    + '<div class="timerow"><span class="time">'+esc(r.time)+'</span><span class="route">'+esc(r.route)+"</span>"+badge(r.status)+"</div>"
+    + '<div class="org">'+esc(r.organizer)+'<span class="tag">Primary contact</span></div>'
+    + depHTML(r)
+    + (r.connection ? '<div class="conn">'+esc(r.connection)+"</div>" : "")
+    + (r.notes ? '<div class="notes">'+esc(r.notes)+"</div>" : "")
+    + whoHTML(r)
+    + btn
+    + "</div></div>";
+}
+function historyHTML(h){
+  var dparts = (h.day||"").split(", ");
+  return '<div class="card"><div class="cardbody">'
+    + '<div class="timerow"><span class="time">'+esc(h.day)+" · "+esc(h.time)+'</span><span class="route">'+esc(h.route)+"</span>"+badge(h.status)+"</div>"
+    + '<div class="org">'+esc(h.organizer)+'<span class="tag">Primary contact</span></div>'
+    + (h.dep ? '<div class="dep">'+esc(h.dep)+"</div>" : "")
+    + (h.conn ? '<div class="conn">'+esc(h.conn)+"</div>" : "")
+    + ((h.yes&&h.yes.length)?'<div class="who"><span class="lbl">Yes</span><div class="chips">'+chips(h.yes)+"</div></div>":"")
+    + ((h.maybe&&h.maybe.length)?'<div class="who"><span class="lbl">Maybe</span><div class="chips">'+chips(h.maybe)+"</div></div>":"")
+    + "</div></div>";
+}
+function rangeLabel(runs){
+  if(!runs.length) return "";
+  function f(dstr){ var m=/(\d{4})-(\d{2})-(\d{2})/.exec(dstr); if(!m) return dstr; var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]; return months[parseInt(m[2],10)-1]+" "+parseInt(m[3],10); }
+  var a=f(runs[0].date), b=f(runs[runs.length-1].date);
+  return (a===b?a:a+" – "+b)+" · "+runs.length+(runs.length===1?" run":" runs");
+}
+function render(data, live){
+  currentData = data;
+  document.getElementById("stamp").textContent = "Postings as of "+(data.updated||"");
+  document.getElementById("livedot").className = "dot"+(live?" live":"");
+  document.getElementById("countline").textContent = rangeLabel(data.runs||[]);
+  applyFilter();
+  document.getElementById("history").innerHTML = HISTORY.map(historyHTML).join("");
+}
+function applyFilter(){
+  var runs = (currentData.runs||[]).filter(function(r){ return currentFilter==="all" || r.status===currentFilter; });
+  document.getElementById("runs").innerHTML = runs.length ? runs.map(cardHTML).join("") : '<p class="countline">No runs in this category right now.</p>';
+}
+document.getElementById("filters").addEventListener("click", function(e){
+  if(e.target.tagName!=="BUTTON") return;
+  currentFilter = e.target.getAttribute("data-f");
+  var btns = this.querySelectorAll("button");
+  for(var i=0;i<btns.length;i++){ btns[i].className = btns[i]===e.target ? "on" : ""; }
+  applyFilter();
+});
+/* Snowflakes in the header */
+(function(){
+  var header = document.querySelector("header");
+  for(var i=0;i<26;i++){
+    var s = document.createElement("span");
+    s.className = "flake"; s.textContent = "❄";
+    s.style.left = (Math.random()*100)+"%";
+    s.style.fontSize = (8+Math.random()*12)+"px";
+    s.style.animationDuration = (5+Math.random()*7)+"s";
+    s.style.animationDelay = (-Math.random()*8)+"s";
+    header.appendChild(s);
+  }
+})();
+/* Load the live data file (same directory as this page); fall back to the baked-in copy */
+render(FALLBACK, false);
+fetch("specials.json", {cache:"no-store"})
+  .then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); })
+  .then(function(d){ if(d && Object.prototype.toString.call(d.runs)==="[object Array]"){ render(d, true); } })
+  .catch(function(){ /* keep the fallback render with the amber dot */ });
+</script>
+</body>
+</html>
