@@ -50,7 +50,26 @@
       "time": "1:05 PM",
       "subject": "[Pines Winter Ferry] 🚨Gauging Interest 🚨 2026 Election Day Lateral Water Taxi Service from The Pines to Ocean Bay Park 🗳️",
       "departure_note": "Lateral service between Fire Island communities — not a mainland run."
+    },
+    {
+      "date": "2026-11-04",
+      "day": "Wed, Nov 4",
+      "time": "9:00 AM",
+      "route": "Sayville → Pines",
+      "status": "gauging",
+      "organizer": "TEST ENTRY — please ignore",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": null,
+      "notes": "Temporary test entry to verify live updates on the new GitHub Pages site.",
+      "riders_yes": [
+        "Test Rider"
+      ],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] TEST ENTRY"
     }
   ],
-  "updated": "Mon Nov 2, 2026, 1:35 AM EST"
+  "updated": "Mon Nov 2, 2026, 1:37 AM EST"
 }
