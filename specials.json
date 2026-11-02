@@ -5,12 +5,14 @@
       "date": "2026-11-02",
       "day": "Mon, Nov 2",
       "departure": null,
-      "notes": "Glenn posted: \"I've scheduled a special this Monday Nov 2 at 1:30 to the Pines if anyone wants to join let me know.\" Departure point and provider were not stated in the post. Peter Schwartz replied asking whether it is with Sayville Ferry, and said he might be interested in taking the return trip back. DJ Mike Borowski replied Nov 2 asking whether the special is still happening today and, if so, from where.",
+      "notes": "Glenn posted: \"I've scheduled a special this Monday Nov 2 at 1:30 to the Pines if anyone wants to join let me know.\" Departure point and provider were not stated in the post. Peter Schwartz replied asking whether it is with Sayville Ferry, and said he might be interested in taking the return trip back. DJ Mike Borowski replied Nov 2 asking whether the special is still happening today and, if so, from where, then at 7:27 AM said he'd like to join (still asking Sayville or Blue Point).",
       "organizer": "Glenn Rice",
       "provider": null,
       "riders_maybe": [],
       "riders_note": null,
-      "riders_yes": [],
+      "riders_yes": [
+        "DJ Mike Borowski"
+      ],
       "route": "→ Pines",
       "status": "confirmed",
       "time": "1:30 PM",
@@ -52,5 +54,5 @@
       "departure_note": "Lateral service between Fire Island communities — not a mainland run."
     }
   ],
-  "updated": "Mon Nov 2, 2026, 4:45 AM EST"
+  "updated": "Mon Nov 2, 2026, 7:48 AM EST"
 }
