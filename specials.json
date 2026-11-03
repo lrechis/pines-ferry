@@ -1,6 +1,23 @@
 {
   "runs": [
     {
+      "date": "2026-11-04",
+      "day": "Wed, Nov 4",
+      "time": "1:30 PM",
+      "route": "Pines → Sayville",
+      "status": "confirmed",
+      "organizer": "Rick Weber",
+      "departure": null,
+      "provider": null,
+      "departure_note": null,
+      "connection": null,
+      "notes": "Rick Weber posted Nov 3: booked a 1:30 PM ferry for Wednesday Nov 4, Pines to Sayville. (His subject line reads 'Wed Nov 1' but the post states Wednesday Nov 4th.)",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] SPECIAL for Wed Nov 1"
+    },
+    {
       "date": "2026-11-05",
       "day": "Thu, Nov 5",
       "time": "Late morning / early afternoon",
@@ -56,5 +73,5 @@
       "subject": "[Pines Winter Ferry] Friday evening special Sayville to Pines"
     }
   ],
-  "updated": "Tue Nov 3, 2026, 3:22 PM EST"
+  "updated": "Tue Nov 3, 2026, 5:25 PM EST"
 }
