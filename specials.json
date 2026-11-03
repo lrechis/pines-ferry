@@ -62,14 +62,15 @@
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": null,
-      "notes": "Mike Koessel posted Nov 2 gauging interest in sharing a special ferry from Sayville to the Pines on Thursday Nov 5 at 7 pm. (Flexible on time) Tim Douglas (Maybe) proposed 8:15-8:30 PM instead — he and his husband will be on the 6:17 train out of Grand Central.",
+      "notes": "Mike Koessel posted Nov 2 gauging interest in sharing a special ferry from Sayville to the Pines on Thursday Nov 5 at 7 pm. (Flexible on time) Tim Douglas (Maybe) proposed 8:15-8:30 PM instead — he and his husband will be on the 6:17 train out of Grand Central. Scott Kolb (Maybe) replied Nov 3 he would be interested in an 8pm-ish special Thursday, possibly with two others.",
       "riders_yes": [],
       "riders_maybe": [
-        "Tim Douglas"
+        "Tim Douglas",
+        "Scott Kolb"
       ],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Gauging interest for Sayville ferry special on Thursday eve"
     }
   ],
-  "updated": "Mon Nov 2, 2026, 10:46 PM EST"
+  "updated": "Tue Nov 3, 2026, 10:17 AM EST"
 }
