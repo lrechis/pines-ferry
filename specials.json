@@ -1,23 +1,6 @@
 {
   "runs": [
     {
-      "connection": "Arrives Ocean Bay Park by 11:50 AM; riders sign up via the headcount form at fippoa.org/election-day-lateral-service",
-      "date": "2026-11-03",
-      "day": "Tue, Nov 3",
-      "departure": null,
-      "notes": "Election Day lateral water taxi service (not a Sayville run). Confirmed Nov 1 by Chris Mai (FIPPOA): a lateral special with SFS from the Pines to Ocean Bay Park for Election Day.",
-      "organizer": "Chris Mai (FIPPOA)",
-      "provider": null,
-      "riders_maybe": [],
-      "riders_note": "Sign-ups are collected through the FIPPOA headcount form, not by email, so rider names aren't listed here.",
-      "riders_yes": [],
-      "route": "Pines → Ocean Bay Park",
-      "status": "confirmed",
-      "time": "11:30 AM",
-      "subject": "[Pines Winter Ferry] 🚨Gauging Interest 🚨 2026 Election Day Lateral Water Taxi Service from The Pines to Ocean Bay Park 🗳️",
-      "departure_note": "Lateral service between Fire Island communities — not a mainland run."
-    },
-    {
       "connection": "Return leg of the Election Day lateral service; sign up via the headcount form at fippoa.org/election-day-lateral-service",
       "date": "2026-11-03",
       "day": "Tue, Nov 3",
@@ -90,5 +73,5 @@
       "subject": "[Pines Winter Ferry] Friday evening special Sayville to Pines"
     }
   ],
-  "updated": "Tue Nov 3, 2026, 12:50 PM EST"
+  "updated": "Tue Nov 3, 2026, 1:45 PM EST"
 }
