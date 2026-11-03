@@ -70,7 +70,24 @@
       ],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Gauging interest for Sayville ferry special on Thursday eve"
+    },
+    {
+      "date": "2026-11-06",
+      "day": "Fri, Nov 6",
+      "time": "6:45 PM",
+      "route": "Sayville → Pines",
+      "status": "gauging",
+      "organizer": "John Clifford",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": "Connects with the LIRR that arrives Sayville at 6:38 PM",
+      "notes": "John Clifford posted Nov 3 gauging interest but 95% committed to a special from Sayville to the Pines departing Sayville 6:45 PM, connecting with the LIRR arriving Sayville 6:38 PM. Email him if interested.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Friday evening special Sayville to Pines"
     }
   ],
-  "updated": "Tue Nov 3, 2026, 10:17 AM EST"
+  "updated": "Tue Nov 3, 2026, 10:48 AM EST"
 }
