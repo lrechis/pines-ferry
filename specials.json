@@ -1,25 +1,6 @@
 {
   "runs": [
     {
-      "connection": null,
-      "date": "2026-11-02",
-      "day": "Mon, Nov 2",
-      "departure": "Sayville",
-      "notes": "Glenn posted: \"I've scheduled a special this Monday Nov 2 at 1:30 to the Pines if anyone wants to join let me know.\" On Nov 2 Glenn confirmed the run and moved it to 1:00 PM, Sayville to Pines. Peter Schwartz replied asking whether it is with Sayville Ferry, and said he might be interested in taking the return trip back. DJ Mike Borowski joined and confirmed he will be there.",
-      "organizer": "Glenn Rice",
-      "provider": "Sayville Ferry",
-      "riders_maybe": [],
-      "riders_note": null,
-      "riders_yes": [
-        "DJ Mike Borowski"
-      ],
-      "route": "Sayville → Pines",
-      "status": "confirmed",
-      "time": "1:00 PM",
-      "subject": "[Pines Winter Ferry] Special to Pines / Monday Nov 2 @ 1:30 PM",
-      "departure_note": null
-    },
-    {
       "connection": "Arrives Ocean Bay Park by 11:50 AM; riders sign up via the headcount form at fippoa.org/election-day-lateral-service",
       "date": "2026-11-03",
       "day": "Tue, Nov 3",
@@ -88,5 +69,5 @@
       "subject": "[Pines Winter Ferry] Gauging interest for Sayville ferry special on Thursday eve"
     }
   ],
-  "updated": "Mon Nov 2, 2026, 11:15 AM EST"
+  "updated": "Mon Nov 2, 2026, 8:43 PM EST"
 }
