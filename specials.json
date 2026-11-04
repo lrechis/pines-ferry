@@ -45,9 +45,10 @@
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": null,
-      "notes": "Mike Koessel posted Nov 2 gauging interest in a special from Sayville to the Pines Thu Nov 5 at 7 pm (flexible on time). Tim Douglas reported Nov 3: booked for 8:30 PM from Sayville Ferry Service. Scott Kolb (Maybe) was interested in an 8pm-ish special, possibly with two others. Mike Koessel replied Nov 3 that 8:30 PM is a bit later than hoped and he'll confirm Nov 4 whether he can join too.",
+      "notes": "Mike Koessel posted Nov 2 gauging interest in a special from Sayville to the Pines Thu Nov 5 at 7 pm (flexible on time). Tim Douglas reported Nov 3: booked for 8:30 PM from Sayville Ferry Service. Scott Kolb (Maybe) was interested in an 8pm-ish special, possibly with two others. Mike Koessel replied Nov 3 that 8:30 PM is a bit later than hoped and he'll confirm Nov 4 whether he can join too. Robert Gray replied Nov 4 that he would also like to join.",
       "riders_yes": [
-        "Tim Douglas"
+        "Tim Douglas",
+        "Robert Gray"
       ],
       "riders_maybe": [
         "Scott Kolb"
@@ -73,5 +74,5 @@
       "subject": "[Pines Winter Ferry] Friday evening special Sayville to Pines"
     }
   ],
-  "updated": "Tue Nov 3, 2026, 5:25 PM EST"
+  "updated": "Wed Nov 4, 2026, 11:22 AM EST"
 }
