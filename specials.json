@@ -56,7 +56,41 @@
       "riders_maybe": [],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Friday evening special Sayville to Pines"
+    },
+    {
+      "date": "2026-11-06",
+      "day": "Fri, Nov 6",
+      "time": "8:00 PM ish",
+      "route": "Sayville → Pines",
+      "status": "gauging",
+      "organizer": "Eduardo Osorio",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": "Would line up with the 6:01 PM or 6:28 PM trains out of Penn Station, arriving Sayville 7:37 PM or 7:53 PM",
+      "notes": "Eduardo Osorio posted Nov 5 gauging interest in sharing a special around 8 PM on Fri Nov 6 from Sayville to the Pines. He has a group of 4 people, himself included.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": "Organizer's group is 4 people in total, himself included.",
+      "subject": "[Pines Winter Ferry] Gauging interest: Sayville -> FIP 11/6 8pm ish"
+    },
+    {
+      "date": "2026-11-15",
+      "day": "Sun, Nov 15",
+      "time": "7:30 PM",
+      "route": "Blue Point → Pines",
+      "status": "confirmed",
+      "organizer": "Gary & Jesse",
+      "departure": "Blue Point",
+      "provider": "H2O Limo",
+      "departure_note": null,
+      "connection": null,
+      "notes": "Gary & Jesse have booked a trip with H2O Limo from Blue Point to the Pines on Sunday Nov 15 at 7:30 PM. Let them know if you would like to join.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Sunday November 15th - 7:30 PM H2o Limo - Blue Point to the Pines"
     }
   ],
-  "updated": "Thu Nov 5, 2026, 1:50 PM EST"
+  "updated": "Thu Nov 5, 2026, 2:18 PM EST"
 }
