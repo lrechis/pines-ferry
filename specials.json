@@ -22,16 +22,16 @@
       "day": "Fri, Nov 6",
       "time": "8:00 PM ish",
       "route": "Sayville → Pines",
-      "status": "gauging",
+      "status": "confirmed",
       "organizer": "Eduardo Osorio",
       "departure": "Sayville",
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": "Would line up with the 6:01 PM or 6:28 PM trains out of Penn Station, arriving Sayville 7:37 PM or 7:53 PM",
-      "notes": "Eduardo Osorio posted Nov 5 gauging interest in sharing a special around 8 PM on Fri Nov 6 from Sayville to the Pines. He has a group of 4 people, himself included. On Nov 5 he replied his group cannot make John Clifford's 6:45 PM timing, and told Todd Sears they will continue gauging interest for a time closer to 8 PM (that lines up with two trains), rather than Todd's later ~9 PM proposal.",
+      "notes": "Eduardo Osorio posted Nov 5 gauging interest in sharing a special around 8 PM on Fri Nov 6 from Sayville to the Pines. On Nov 6 he confirmed the 8 PM ferry is booked. He has a group of 4 people (three adults and one 2-year-old), and two to four more people may join from private messages.",
       "riders_yes": [],
       "riders_maybe": [],
-      "riders_note": "Organizer's group is 4 people in total, himself included.",
+      "riders_note": "Organizer's group is 4 people (three adults and one 2-year-old); two to four more may join.",
       "subject": "[Pines Winter Ferry] Gauging interest: Sayville -> FIP 11/6 8pm ish"
     },
     {
@@ -69,5 +69,5 @@
       "subject": "[Pines Winter Ferry] Sunday November 15th - 7:30 PM H2o Limo - Blue Point to the Pines"
     }
   ],
-  "updated": "Fri Nov 6, 2026, 12:15 AM EST"
+  "updated": "Fri Nov 6, 2026, 11:50 AM EST"
 }
