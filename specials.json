@@ -1,23 +1,6 @@
 {
   "runs": [
     {
-      "date": "2026-11-05",
-      "day": "Thu, Nov 5",
-      "time": "Late morning / early afternoon",
-      "route": "Pines → Sayville",
-      "status": "gauging",
-      "organizer": "Philip Carroll",
-      "departure": null,
-      "provider": null,
-      "departure_note": null,
-      "connection": "Organizer has a PM flight out of Newark on 11/5 and does not want to leave on the first boat",
-      "notes": "Philip Carroll posted Nov 2 gauging interest in sharing a special late morning/early afternoon on Thu Nov 5 from the Pines to Sayville. No specific time stated.",
-      "riders_yes": [],
-      "riders_maybe": [],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Gauging interest - FIP —> Sayville 11/5"
-    },
-    {
       "date": "2026-11-06",
       "day": "Fri, Nov 6",
       "time": "6:45 PM",
@@ -86,5 +69,5 @@
       "subject": "[Pines Winter Ferry] Sunday November 15th - 7:30 PM H2o Limo - Blue Point to the Pines"
     }
   ],
-  "updated": "Thu Nov 5, 2026, 10:45 PM EST"
+  "updated": "Fri Nov 6, 2026, 12:15 AM EST"
 }
