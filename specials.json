@@ -18,29 +18,6 @@
       "subject": "[Pines Winter Ferry] Gauging interest - FIP —> Sayville 11/5"
     },
     {
-      "date": "2026-11-05",
-      "day": "Thu, Nov 5",
-      "time": "8:30 PM",
-      "route": "Sayville → Pines",
-      "status": "confirmed",
-      "organizer": "Mike Koessel",
-      "departure": "Sayville",
-      "provider": "Sayville Ferry",
-      "departure_note": null,
-      "connection": null,
-      "notes": "Mike Koessel posted Nov 2 gauging interest in a special from Sayville to the Pines Thu Nov 5 at 7 pm (flexible on time). Tim Douglas reported Nov 3: booked for 8:30 PM from Sayville Ferry Service. Scott Kolb (Maybe) was interested in an 8pm-ish special, possibly with two others. Mike Koessel replied Nov 3 that 8:30 PM is a bit later than hoped and he'll confirm Nov 4 whether he can join too. Robert Gray replied Nov 4 that he would also like to join. Franco Rivera replied Nov 4 that he would also like to join and may have a few people with him. Mike Koessel confirmed Nov 5 that he will not be joining the 8:30 PM run (he made it out earlier).",
-      "riders_yes": [
-        "Tim Douglas",
-        "Robert Gray",
-        "Franco Rivera"
-      ],
-      "riders_maybe": [
-        "Scott Kolb"
-      ],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Gauging interest for Sayville ferry special on Thursday eve"
-    },
-    {
       "date": "2026-11-06",
       "day": "Fri, Nov 6",
       "time": "6:45 PM",
@@ -109,5 +86,5 @@
       "subject": "[Pines Winter Ferry] Sunday November 15th - 7:30 PM H2o Limo - Blue Point to the Pines"
     }
   ],
-  "updated": "Thu Nov 5, 2026, 3:50 PM EST"
+  "updated": "Thu Nov 5, 2026, 10:45 PM EST"
 }
