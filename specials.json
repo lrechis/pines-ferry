@@ -3,32 +3,15 @@
     {
       "date": "2026-11-06",
       "day": "Fri, Nov 6",
-      "time": "8:00 PM ish",
-      "route": "Sayville → Pines",
-      "status": "confirmed",
-      "organizer": "Eduardo Osorio",
-      "departure": "Sayville",
-      "provider": "Sayville Ferry",
-      "departure_note": null,
-      "connection": "Would line up with the 6:01 PM or 6:28 PM trains out of Penn Station, arriving Sayville 7:37 PM or 7:53 PM",
-      "notes": "Eduardo Osorio posted Nov 5 gauging interest in sharing a special around 8 PM on Fri Nov 6 from Sayville to the Pines. On Nov 6 he confirmed the 8 PM ferry is booked. He has a group of 4 people (three adults and one 2-year-old), and as of 4 PM it looks like 9 people in total will join, per private messages.",
-      "riders_yes": [],
-      "riders_maybe": [],
-      "riders_note": "Organizer's group is 4 people (three adults and one 2-year-old); likely 9 people in total as of 4 PM, per private messages to the organizer.",
-      "subject": "[Pines Winter Ferry] Gauging interest: Sayville -> FIP 11/6 8pm ish"
-    },
-    {
-      "date": "2026-11-06",
-      "day": "Fri, Nov 6",
       "time": "9:30 PM",
-      "route": "Sayville → Pines",
+      "route": "Sayville \u2192 Pines",
       "status": "confirmed",
       "organizer": "Todd Sears",
       "departure": "Sayville",
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": null,
-      "notes": "Todd Sears posted Nov 5 proposing a later special on Fri Nov 6, then confirmed he has booked a special for 9:30 PM — he wishes he could make the 8:30 but thinks it is cutting it too close with traffic. Let him know if you want to join the later boat.",
+      "notes": "Todd Sears posted Nov 5 proposing a later special on Fri Nov 6, then confirmed he has booked a special for 9:30 PM \u2014 he wishes he could make the 8:30 but thinks it is cutting it too close with traffic. Let him know if you want to join the later boat.",
       "riders_yes": [],
       "riders_maybe": [],
       "riders_note": null,
@@ -38,7 +21,7 @@
       "date": "2026-11-15",
       "day": "Sun, Nov 15",
       "time": "7:30 PM",
-      "route": "Blue Point → Pines",
+      "route": "Blue Point \u2192 Pines",
       "status": "confirmed",
       "organizer": "Gary & Jesse",
       "departure": "Blue Point",
@@ -52,5 +35,5 @@
       "subject": "[Pines Winter Ferry] Sunday November 15th - 7:30 PM H2o Limo - Blue Point to the Pines"
     }
   ],
-  "updated": "Fri Nov 6, 2026, 8:46 PM EST"
+  "updated": "Fri Nov 6, 2026, 10:17 PM EST"
 }
