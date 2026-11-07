@@ -1,27 +1,10 @@
 {
   "runs": [
     {
-      "date": "2026-11-06",
-      "day": "Fri, Nov 6",
-      "time": "9:30 PM",
-      "route": "Sayville \u2192 Pines",
-      "status": "confirmed",
-      "organizer": "Todd Sears",
-      "departure": "Sayville",
-      "provider": "Sayville Ferry",
-      "departure_note": null,
-      "connection": null,
-      "notes": "Todd Sears posted Nov 5 proposing a later special on Fri Nov 6, then confirmed he has booked a special for 9:30 PM \u2014 he wishes he could make the 8:30 but thinks it is cutting it too close with traffic. Let him know if you want to join the later boat.",
-      "riders_yes": [],
-      "riders_maybe": [],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Gauging interest: Sayville -> FIP 11/6 8pm ish"
-    },
-    {
       "date": "2026-11-15",
       "day": "Sun, Nov 15",
       "time": "7:30 PM",
-      "route": "Blue Point \u2192 Pines",
+      "route": "Blue Point → Pines",
       "status": "confirmed",
       "organizer": "Gary & Jesse",
       "departure": "Blue Point",
@@ -35,5 +18,5 @@
       "subject": "[Pines Winter Ferry] Sunday November 15th - 7:30 PM H2o Limo - Blue Point to the Pines"
     }
   ],
-  "updated": "Fri Nov 6, 2026, 10:17 PM EST"
+  "updated": "Fri Nov 6, 2026, 11:45 PM EST"
 }
