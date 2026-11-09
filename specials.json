@@ -1,6 +1,23 @@
 {
-  "updated": "Sun Nov 8, 2026, 12:20 PM EST",
+  "updated": "Mon Nov 9, 2026, 8:20 AM EST",
   "runs": [
+    {
+      "date": "2026-11-10",
+      "day": "Tue, Nov 10",
+      "time": "10 or 10:30 AM",
+      "route": "Direction not stated",
+      "status": "gauging",
+      "organizer": "Michael Giordano",
+      "departure": null,
+      "provider": null,
+      "departure_note": null,
+      "connection": null,
+      "notes": "Gauging interest in a special on Tuesday Nov 10 at about 10 or 10:30 AM (late morning). Direction, departure point and provider not stated in the post.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Special Tomirrow Tuesday 11/10 at about 10 or 10:30 am"
+    },
     {
       "date": "2026-11-11",
       "day": "Wed, Nov 11",
