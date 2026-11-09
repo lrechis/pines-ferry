@@ -1,5 +1,5 @@
 {
-  "updated": "Mon Nov 9, 2026, 1:19 PM EST",
+  "updated": "Mon Nov 9, 2026, 1:50 PM EST",
   "runs": [
     {
       "date": "2026-11-10",
@@ -65,7 +65,9 @@
       "connection": "Connects with the LIRR that leaves Penn Station at 5:13 PM and Grand Central at 5:07 PM, arriving Sayville at 6:38 PM",
       "notes": "A special is confirmed for Friday Nov 13 at 6:45 PM from Sayville to the Pines. Currently 5 passengers — let John know if you want to join.",
       "riders_yes": [],
-      "riders_maybe": [],
+      "riders_maybe": [
+        "Michael (husband of Stephen Tan)"
+      ],
       "riders_note": "Five passengers so far, per the organizer (including Bridget, who was asked to confirm).",
       "subject": "[Pines Winter Ferry] Special Friday, November 13, 2026 confirmed for 6:45pm to Pines"
     },
