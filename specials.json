@@ -1,23 +1,6 @@
 {
-  "updated": "Tue Nov 10, 2026, 11:48 AM EST",
+  "updated": "Tue Nov 10, 2026, 12:50 PM EST",
   "runs": [
-    {
-      "date": "2026-11-10",
-      "day": "Tue, Nov 10",
-      "time": "10 or 10:30 AM",
-      "route": "Direction not stated",
-      "status": "gauging",
-      "organizer": "Michael Giordano",
-      "departure": null,
-      "provider": null,
-      "departure_note": null,
-      "connection": null,
-      "notes": "Gauging interest in a special on Tuesday Nov 10 at about 10 or 10:30 AM (late morning). Direction, departure point and provider not stated in the post.",
-      "riders_yes": [],
-      "riders_maybe": [],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Special Tomirrow Tuesday 11/10 at about 10 or 10:30 am"
-    },
     {
       "date": "2026-11-11",
       "day": "Wed, Nov 11",
@@ -63,15 +46,16 @@
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": "Connects with the LIRR that leaves Penn Station at 5:13 PM and Grand Central at 5:07 PM, arriving Sayville at 6:38 PM",
-      "notes": "A special is confirmed for Friday Nov 13 at 6:45 PM from Sayville to the Pines. Currently 5 passengers — let John know if you want to join. John is organizing the Colonial van for riders coming from the train and needs passenger numbers for Sayville Ferry Service.",
+      "notes": "A special is confirmed for Friday Nov 13 at 6:45 PM from Sayville to the Pines. John Clifford's group has four confirmed including John, plus Chris Berry confirmed. John is coordinating a van from the LIRR station to the ferry for riders who need it.",
       "riders_yes": [
         "Tom Wolffers",
-        "Chris Berry"
+        "Chris Berry",
+        "Karen Grae"
       ],
       "riders_maybe": [
         "Michael (husband of Stephen Tan)"
       ],
-      "riders_note": "Five passengers so far, per the organizer (including Bridget, who was asked to confirm). Tom Wolffers would like to join with possibly about 5 people; headcount to be confirmed.",
+      "riders_note": "Tom Wolffers would like to join with possibly about 5 people; headcount to be confirmed. Michael (husband of Stephen Tan) may join, awaiting confirmation.",
       "subject": "[Pines Winter Ferry] Special Friday, November 13, 2026 confirmed for 6:45pm to Pines"
     },
     {
