@@ -1,23 +1,6 @@
 {
-  "updated": "Tue Nov 10, 2026, 4:15 PM EST",
+  "updated": "Wed Nov 11, 2026, 12:15 PM EST",
   "runs": [
-    {
-      "date": "2026-11-11",
-      "day": "Wed, Nov 11",
-      "time": "10:00 AM",
-      "route": "Sayville → Pines",
-      "status": "gauging",
-      "organizer": "Michael Giordano",
-      "departure": "Sayville",
-      "provider": "Sayville Ferry",
-      "departure_note": null,
-      "connection": null,
-      "notes": "Gauging interest in a special Wed Nov 11 at 10:00 AM from Sayville to the Pines. Can be a bit flexible with time.",
-      "riders_yes": [],
-      "riders_maybe": [],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Special Wed am Nov 11, 2026"
-    },
     {
       "date": "2026-11-12",
       "day": "Thu, Nov 12",
