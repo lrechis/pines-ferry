@@ -1,5 +1,5 @@
 {
-  "updated": "Wed Nov 11, 2026, 12:15 PM EST",
+  "updated": "Wed Nov 11, 2026, 9:15 PM EST",
   "runs": [
     {
       "date": "2026-11-12",
@@ -29,11 +29,14 @@
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": "Connects with the LIRR that leaves Penn Station at 5:13 PM and Grand Central at 5:07 PM, arriving Sayville at 6:38 PM",
-      "notes": "A special is confirmed for Friday Nov 13 at 6:45 PM from Sayville to the Pines. John Clifford's group has four confirmed including John, plus Chris Berry confirmed. John is coordinating a van from the LIRR station to the ferry for riders who need it.",
+      "notes": "A special is confirmed for Friday Nov 13 at 6:45 PM from Sayville to the Pines. John Clifford's group has four confirmed including John, plus Chris Berry confirmed. John is coordinating a van from the LIRR station to the ferry for riders who need it. Rob Sperte, Eric Sawyer and Tommaso Casini (taking the train) would also like to join.",
       "riders_yes": [
         "Tom Wolffers",
         "Chris Berry",
-        "Karen Grae"
+        "Karen Grae",
+        "Rob Sperte",
+        "Eric Sawyer",
+        "Tommaso Casini"
       ],
       "riders_maybe": [],
       "riders_note": "Tom Wolffers would like to join with possibly about 5 people; headcount to be confirmed.",
