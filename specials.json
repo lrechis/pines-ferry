@@ -1,5 +1,5 @@
 {
-  "updated": "Wed Nov 11, 2026, 10:19 PM EST",
+  "updated": "Thu Nov 12, 2026, 12:19 AM EST",
   "runs": [
     {
       "date": "2026-11-12",
@@ -53,9 +53,11 @@
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": null,
-      "notes": "Jerry Johnson is gauging interest in a special from Sayville to the Pines at 8:00 PM or later on Friday Nov 13. They can't make the 6:45 PM special. Contact Jerry if you'd like to join.",
+      "notes": "Jerry Johnson is gauging interest in a special from Sayville to the Pines at 8:00 PM or later on Friday Nov 13. They can't make the 6:45 PM special. Contact Jerry if you'd like to join. Tim Douglas and his husband could do 8:15 PM, coming from Grand Central on the 6:17 train.",
       "riders_yes": [],
-      "riders_maybe": [],
+      "riders_maybe": [
+        "Tim Douglas"
+      ],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Friday 8pm special"
     },
