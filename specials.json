@@ -1,5 +1,5 @@
 {
-  "updated": "Thu Nov 12, 2026, 8:48 AM EST",
+  "updated": "Thu Nov 12, 2026, 10:52 AM EST",
   "runs": [
     {
       "date": "2026-11-12",
@@ -45,19 +45,19 @@
     {
       "date": "2026-11-13",
       "day": "Fri, Nov 13",
-      "time": "8:00 PM or later",
+      "time": "8:15 PM",
       "route": "Sayville → Pines",
-      "status": "gauging",
+      "status": "confirmed",
       "organizer": "Jerry Johnson",
       "departure": "Sayville",
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": null,
-      "notes": "Jerry Johnson is gauging interest in a special from Sayville to the Pines at 8:00 PM or later on Friday Nov 13. They can't make the 6:45 PM special. Contact Jerry if you'd like to join. Tim Douglas and his husband could do 8:15 PM, coming from Grand Central on the 6:17 train. Jerry is confirming with Jason (coming from JFK) and checking with Sayville Ferry. Jason is good for 8:15 PM; Jerry will call Sayville Ferry about reserving and asked Tim to confirm they are in for 2 people.",
-      "riders_yes": [],
-      "riders_maybe": [
+      "notes": "Jerry Johnson has booked a special from Sayville to the Pines at 8:15 PM on Friday Nov 13. 3 passengers in total — Jerry plus Tim Douglas's party of 2, who have confirmed. Price is $300 due to the departure time. Tim notes their arrival could be closer to 8:30 if Uber is slow, but they'll try to reserve in advance.",
+      "riders_yes": [
         "Tim Douglas"
       ],
+      "riders_maybe": [],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Friday 8pm special"
     },
