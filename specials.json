@@ -1,5 +1,5 @@
 {
-  "updated": "Wed Nov 11, 2026, 9:15 PM EST",
+  "updated": "Wed Nov 11, 2026, 10:19 PM EST",
   "runs": [
     {
       "date": "2026-11-12",
@@ -41,6 +41,23 @@
       "riders_maybe": [],
       "riders_note": "Tom Wolffers would like to join with possibly about 5 people; headcount to be confirmed.",
       "subject": "[Pines Winter Ferry] Special Friday, November 13, 2026 confirmed for 6:45pm to Pines"
+    },
+    {
+      "date": "2026-11-13",
+      "day": "Fri, Nov 13",
+      "time": "8:00 PM or later",
+      "route": "Sayville → Pines",
+      "status": "gauging",
+      "organizer": "Jerry Johnson",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": null,
+      "notes": "Jerry Johnson is gauging interest in a special from Sayville to the Pines at 8:00 PM or later on Friday Nov 13. They can't make the 6:45 PM special. Contact Jerry if you'd like to join.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Friday 8pm special"
     },
     {
       "date": "2026-11-15",
