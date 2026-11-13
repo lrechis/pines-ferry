@@ -1,18 +1,18 @@
 {
-  "updated": "Fri Nov 13, 2026, 11:15 AM EST",
+  "updated": "Fri Nov 13, 2026, 5:55 PM EST",
   "runs": [
     {
       "date": "2026-11-13",
       "day": "Fri, Nov 13",
       "time": "6:45 PM",
-      "route": "Sayville → Pines",
+      "route": "Sayville \u2192 Pines",
       "status": "confirmed",
       "organizer": "John Clifford",
       "departure": "Sayville",
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": "Connects with the LIRR that leaves Penn Station at 5:13 PM and Grand Central at 5:07 PM, arriving Sayville at 6:38 PM",
-      "notes": "A special is confirmed for Friday Nov 13 at 6:45 PM from Sayville to the Pines. John Clifford's group has four confirmed including John, plus Chris Berry confirmed. Tom Wolffers' group will be 4, and Gabriela Casella-Nicosia will also join (meeting everyone at the ferry). Colonial will have a shuttle bus meeting the 6:38 PM train for anyone who needs transportation train to boat. Rob Sperte, Eric Sawyer and Tommaso Casini (taking the train) would also like to join. Carlos Ruisanchez will also join with 3 people in total, and will not require the bus. Andrew Kirtzman will also join.",
+      "notes": "A special is confirmed for Friday Nov 13 at 6:45 PM from Sayville to the Pines. John Clifford's group has four confirmed including John, plus Chris Berry confirmed. Tom Wolffers' group will now be 6, and Gabriela Casella-Nicosia will also join (meeting everyone at the ferry). Colonial will have a shuttle bus meeting the 6:38 PM train, and John Clifford confirmed the van will be at the LIRR. Rob Sperte, Eric Sawyer and Tommaso Casini (taking the train) would also like to join. Carlos Ruisanchez will also join with 3 people in total, and will not require the bus. Andrew Kirtzman will also join.",
       "riders_yes": [
         "Tom Wolffers",
         "Chris Berry",
@@ -25,21 +25,21 @@
         "Andrew Kirtzman"
       ],
       "riders_maybe": [],
-      "riders_note": "Tom Wolffers confirmed his group will be 4.",
+      "riders_note": "Tom Wolffers confirmed his group will be 6.",
       "subject": "[Pines Winter Ferry] Special Friday, November 13, 2026 confirmed for 6:45pm to Pines"
     },
     {
       "date": "2026-11-13",
       "day": "Fri, Nov 13",
       "time": "8:15 PM",
-      "route": "Sayville → Pines",
+      "route": "Sayville \u2192 Pines",
       "status": "confirmed",
       "organizer": "Jerry Johnson",
       "departure": "Sayville",
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": null,
-      "notes": "Jerry Johnson has booked a special from Sayville to the Pines at 8:15 PM on Friday Nov 13. 3 passengers in total — Jerry plus Tim Douglas's party of 2, who have confirmed. Price is $300 due to the departure time. Tim notes their arrival could be closer to 8:30 if Uber is slow, but they'll try to reserve in advance.",
+      "notes": "Jerry Johnson has booked a special from Sayville to the Pines at 8:15 PM on Friday Nov 13. Price is $300 due to the departure time. Tim Douglas's party of 2 has confirmed (their arrival could be closer to 8:30 if Uber is slow). Jerry's husband was grounded at JFK and will not make the boat; Jerry, the organizer, will still pay their share.",
       "riders_yes": [
         "Tim Douglas"
       ],
@@ -51,7 +51,7 @@
       "date": "2026-11-15",
       "day": "Sun, Nov 15",
       "time": "7:30 PM",
-      "route": "Blue Point → Pines",
+      "route": "Blue Point \u2192 Pines",
       "status": "confirmed",
       "organizer": "Gary & Jesse",
       "departure": "Blue Point",
