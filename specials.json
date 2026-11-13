@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Nov 13, 2026, 9:50 AM EST",
+  "updated": "Fri Nov 13, 2026, 10:45 AM EST",
   "runs": [
     {
       "date": "2026-11-13",
@@ -12,7 +12,7 @@
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": "Connects with the LIRR that leaves Penn Station at 5:13 PM and Grand Central at 5:07 PM, arriving Sayville at 6:38 PM",
-      "notes": "A special is confirmed for Friday Nov 13 at 6:45 PM from Sayville to the Pines. John Clifford's group has four confirmed including John, plus Chris Berry confirmed. Tom Wolffers' group will be 4, and Gabriela Casella-Nicosia will also join (meeting everyone at the ferry). Colonial will have a shuttle bus meeting the 6:38 PM train for anyone who needs transportation train to boat. Rob Sperte, Eric Sawyer and Tommaso Casini (taking the train) would also like to join.",
+      "notes": "A special is confirmed for Friday Nov 13 at 6:45 PM from Sayville to the Pines. John Clifford's group has four confirmed including John, plus Chris Berry confirmed. Tom Wolffers' group will be 4, and Gabriela Casella-Nicosia will also join (meeting everyone at the ferry). Colonial will have a shuttle bus meeting the 6:38 PM train for anyone who needs transportation train to boat. Rob Sperte, Eric Sawyer and Tommaso Casini (taking the train) would also like to join. Carlos Ruisanchez will also join with 3 people in total, and will not require the bus.",
       "riders_yes": [
         "Tom Wolffers",
         "Chris Berry",
@@ -20,7 +20,8 @@
         "Rob Sperte",
         "Eric Sawyer",
         "Tommaso Casini",
-        "Gabriela Casella-Nicosia"
+        "Gabriela Casella-Nicosia",
+        "Carlos Ruisanchez"
       ],
       "riders_maybe": [],
       "riders_note": "Tom Wolffers confirmed his group will be 4.",
