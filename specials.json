@@ -1,25 +1,6 @@
 {
-  "updated": "Fri Nov 13, 2026, 9:15 PM EST",
+  "updated": "Fri Nov 13, 2026, 10:15 PM EST",
   "runs": [
-    {
-      "date": "2026-11-13",
-      "day": "Fri, Nov 13",
-      "time": "8:15 PM",
-      "route": "Sayville → Pines",
-      "status": "confirmed",
-      "organizer": "Jerry Johnson",
-      "departure": "Sayville",
-      "provider": "Sayville Ferry",
-      "departure_note": null,
-      "connection": null,
-      "notes": "Jerry Johnson has booked a special from Sayville to the Pines at 8:15 PM on Friday Nov 13. Price is $300 due to the departure time. Tim Douglas's party of 2 has confirmed (their arrival could be closer to 8:30 if Uber is slow). Jerry's husband was grounded at JFK and will not make the boat; Jerry, the organizer, will still pay their share.",
-      "riders_yes": [
-        "Tim Douglas"
-      ],
-      "riders_maybe": [],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Friday 8pm special"
-    },
     {
       "date": "2026-11-15",
       "day": "Sun, Nov 15",
