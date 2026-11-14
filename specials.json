@@ -1,5 +1,5 @@
 {
-  "updated": "Sat Nov 14, 2026, 12:19 PM EST",
+  "updated": "Sat Nov 14, 2026, 1:20 PM EST",
   "runs": [
     {
       "date": "2026-11-14",
@@ -421,5 +421,7 @@
       "riders_maybe": [],
       "riders_note": null
     }
-  ]
+  ],
+  "booked_total": 235,
+  "booked_since": "2020-12-24"
 }
