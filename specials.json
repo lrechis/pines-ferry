@@ -1,6 +1,23 @@
 {
-  "updated": "Fri Nov 13, 2026, 10:15 PM EST",
+  "updated": "Sat Nov 14, 2026, 11:25 AM EST",
   "runs": [
+    {
+      "date": "2026-11-14",
+      "day": "Sat, Nov 14",
+      "time": "Later this evening",
+      "route": "Sayville → Pines",
+      "status": "gauging",
+      "organizer": "Matthew Markoff",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": null,
+      "notes": "Matthew is inquiring if anyone is interested in a special later this evening (Saturday, November 14), Sayville to the Pines.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Friday specials"
+    },
     {
       "date": "2026-11-15",
       "day": "Sun, Nov 15",
