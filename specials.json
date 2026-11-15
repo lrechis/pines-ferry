@@ -1,5 +1,5 @@
 {
-  "updated": "Sun Nov 15, 2026, 12:15 AM EST",
+  "updated": "Sun Nov 15, 2026, 11:50 AM EST",
   "runs": [
     {
       "date": "2026-11-15",
@@ -17,6 +17,23 @@
       "riders_maybe": [],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Sunday November 15th - 7:30 PM H2o Limo - Blue Point to the Pines"
+    },
+    {
+      "date": "2026-11-24",
+      "day": "Tue, Nov 24",
+      "time": "Around 6:30",
+      "route": "Direction not stated",
+      "status": "gauging",
+      "organizer": "Jon Staff",
+      "departure": null,
+      "provider": null,
+      "departure_note": null,
+      "connection": null,
+      "notes": "Jon Staff is gauging interest in a special around 6:30 on Tue Nov 24. Direction and departure point not stated in the post.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Tue Nov 24th"
     }
   ],
   "history": [
