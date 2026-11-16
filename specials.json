@@ -1,5 +1,5 @@
 {
-  "updated": "Mon Nov 16, 2026, 1:49 PM EST",
+  "updated": "Mon Nov 16, 2026, 2:17 PM EST",
   "runs": [
     {
       "date": "2026-11-19",
@@ -17,6 +17,23 @@
       "riders_maybe": [],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Sayville Special or H2O on Thu 11/19 @ 8:30pm?"
+    },
+    {
+      "date": "2026-11-20",
+      "day": "Fri, Nov 20",
+      "time": "7:00 PM",
+      "route": "Sayville → Pines",
+      "status": "confirmed",
+      "organizer": "Patrick Boucher",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": "On the 5:13 PM train that gets into Sayville at 6:38 PM",
+      "notes": "Patrick Boucher booked a SFS special to the Pines for Friday night at 7pm; five in his group, all on the 5:13pm train arriving Sayville at 6:38pm.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": "Organizer's group is 5 people.",
+      "subject": "[Pines Winter Ferry] Friday 11/20 - 7pm Special to the Pines"
     },
     {
       "date": "2026-11-24",
