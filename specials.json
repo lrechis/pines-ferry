@@ -1,23 +1,6 @@
 {
-  "updated": "Sun Nov 15, 2026, 11:50 AM EST",
+  "updated": "Sun Nov 15, 2026, 9:45 PM EST",
   "runs": [
-    {
-      "date": "2026-11-15",
-      "day": "Sun, Nov 15",
-      "time": "7:30 PM",
-      "route": "Blue Point → Pines",
-      "status": "confirmed",
-      "organizer": "Gary & Jesse",
-      "departure": "Blue Point",
-      "provider": "H2O Limo",
-      "departure_note": null,
-      "connection": null,
-      "notes": "Gary & Jesse have booked a trip with H2O Limo from Blue Point to the Pines on Sunday Nov 15 at 7:30 PM. Let them know if you would like to join.",
-      "riders_yes": [],
-      "riders_maybe": [],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Sunday November 15th - 7:30 PM H2o Limo - Blue Point to the Pines"
-    },
     {
       "date": "2026-11-24",
       "day": "Tue, Nov 24",
@@ -37,6 +20,22 @@
     }
   ],
   "history": [
+    {
+      "date": "2026-11-15",
+      "day": "Sun, Nov 15",
+      "time": "7:30 PM",
+      "route": "Blue Point → Pines",
+      "status": "confirmed",
+      "organizer": "Gary & Jesse (Jesse Halpern)",
+      "departure": "Blue Point",
+      "provider": "H2O Limo",
+      "departure_note": null,
+      "connection": null,
+      "detail": null,
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null
+    },
     {
       "date": "2026-11-14",
       "day": "Sat, Nov 14",
