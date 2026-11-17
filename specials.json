@@ -1,18 +1,18 @@
 {
-  "updated": "Tue Nov 17, 2026, 9:19 AM EST",
+  "updated": "Tue Nov 17, 2026, 11:15 AM EST",
   "runs": [
     {
       "date": "2026-11-17",
       "day": "Tue, Nov 17",
       "time": "12:00 PM",
-      "route": "Pines →",
+      "route": "Pines → Sayville",
       "status": "confirmed",
       "organizer": "Myron Pavlon-Blum",
       "departure": null,
       "provider": null,
       "departure_note": null,
-      "connection": null,
-      "notes": "Myron Pavlon-Blum scheduled a special today (Tue Nov 17) at noon from the Pines; destination not stated in the post.",
+      "connection": "Return: regularly-scheduled 3:15 PM ferry from Sayville to the Pines",
+      "notes": "Myron Pavlon-Blum scheduled a special today (Tue Nov 17) at noon from the Pines directly to Sayville (15-minute ride); riders can take the regularly-scheduled 3:15 PM ferry back from Sayville to the Pines.",
       "riders_yes": [],
       "riders_maybe": [],
       "riders_note": null,
