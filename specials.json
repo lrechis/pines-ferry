@@ -1,6 +1,23 @@
 {
-  "updated": "Mon Nov 16, 2026, 2:17 PM EST",
+  "updated": "Tue Nov 17, 2026, 9:19 AM EST",
   "runs": [
+    {
+      "date": "2026-11-17",
+      "day": "Tue, Nov 17",
+      "time": "12:00 PM",
+      "route": "Pines →",
+      "status": "confirmed",
+      "organizer": "Myron Pavlon-Blum",
+      "departure": null,
+      "provider": null,
+      "departure_note": null,
+      "connection": null,
+      "notes": "Myron Pavlon-Blum scheduled a special today (Tue Nov 17) at noon from the Pines; destination not stated in the post.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Special from Pines at noon today"
+    },
     {
       "date": "2026-11-19",
       "day": "Thu, Nov 19",
