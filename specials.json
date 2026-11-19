@@ -1,19 +1,21 @@
 {
-  "updated": "Wed Nov 18, 2026, 5:15 PM EST",
+  "updated": "Thu Nov 19, 2026, 2:22 PM EST",
   "runs": [
     {
       "date": "2026-11-19",
       "day": "Thu, Nov 19",
-      "time": "8:30 PM ish",
-      "route": "→ Pines",
+      "time": "8:15 PM",
+      "route": "Blue Point → Pines",
       "status": "confirmed",
       "organizer": "Tim Douglas",
-      "departure": null,
-      "provider": null,
+      "departure": "Blue Point",
+      "provider": "H2O Limo",
       "departure_note": null,
-      "connection": "On the 6:17 train out of Grand Central",
-      "notes": "Tim Douglas and his husband are planning on going out at 8:30ish PM on Thursday Nov 19, leaning towards H2O unless a lot of people would rather do Sayville. Rob Maag confirmed Nov 18: this ride is confirmed — text 631-878-0222 to join.",
-      "riders_yes": [],
+      "connection": "6:17 PM Grand Central train to Patchogue (arrives 8:00 PM); 6:28 PM Penn train transfers to it; Uber from Patchogue to 1 Curtis Rd, Blue Point (5-10 min)",
+      "notes": "Tim Douglas and his husband are going out Thu Nov 19 with H2O at 8:15 PM from Blue Point (1 Curtis Rd). Rob Maag confirmed Nov 18: this ride is confirmed — text 631-878-0222 to join. Michael Walsh joined.",
+      "riders_yes": [
+        "Michael Walsh"
+      ],
       "riders_maybe": [],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Sayville Special or H2O on Thu 11/19 @ 8:30pm?"
@@ -36,6 +38,23 @@
       "riders_maybe": [],
       "riders_note": "Organizer's group is 5 people.",
       "subject": "[Pines Winter Ferry] Friday 11/20 - 7pm Special to the Pines"
+    },
+    {
+      "date": "2026-11-20",
+      "day": "Fri, Nov 20",
+      "time": "8:00 PM",
+      "route": "Sayville → Pines",
+      "status": "confirmed",
+      "organizer": "Chris from Shell",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": null,
+      "notes": "Chris from Shell booked a special from Sayville Fri Nov 20 at 8pm for himself and two others (and a dog); can't make the 7pm — lands at LGA at 6:30.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": "Organizer's group is 3 people (and a dog).",
+      "subject": "[Pines Winter Ferry] Friday 11/20 8pm Special"
     },
     {
       "date": "2026-11-24",
