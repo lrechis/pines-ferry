@@ -1,5 +1,5 @@
 {
-  "updated": "Thu Nov 19, 2026, 2:22 PM EST",
+  "updated": "Thu Nov 19, 2026, 3:45 PM EST",
   "runs": [
     {
       "date": "2026-11-19",
@@ -31,9 +31,10 @@
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": "On the 5:13 PM train that gets into Sayville at 6:38 PM",
-      "notes": "Patrick Boucher booked a SFS special to the Pines for Friday night at 7pm; five in his group, all on the 5:13pm train arriving Sayville at 6:38pm. Alexander F. Marks joined — catching the same train from Penn, asked about Uber-ing from the LIRR to Sayville. Chris from Colonial confirmed he'll be at the station with a bus.",
+      "notes": "Patrick Boucher booked a SFS special to the Pines for Friday night at 7pm; five in his group, all on the 5:13pm train arriving Sayville at 6:38pm. Alexander F. Marks joined — catching the same train from Penn, asked about Uber-ing from the LIRR to Sayville. Chris from Colonial confirmed he'll be at the station with a bus. Bridget Bauer joined (count me in, 1 person).",
       "riders_yes": [
-        "Alexander F. Marks"
+        "Alexander F. Marks",
+        "Bridget Bauer"
       ],
       "riders_maybe": [],
       "riders_note": "Organizer's group is 5 people.",
