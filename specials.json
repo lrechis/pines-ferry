@@ -1,5 +1,5 @@
 {
-  "updated": "Thu Nov 19, 2026, 3:45 PM EST",
+  "updated": "Thu Nov 19, 2026, 8:18 PM EST",
   "runs": [
     {
       "date": "2026-11-19",
@@ -31,10 +31,11 @@
       "provider": "Sayville Ferry",
       "departure_note": null,
       "connection": "On the 5:13 PM train that gets into Sayville at 6:38 PM",
-      "notes": "Patrick Boucher booked a SFS special to the Pines for Friday night at 7pm; five in his group, all on the 5:13pm train arriving Sayville at 6:38pm. Alexander F. Marks joined — catching the same train from Penn, asked about Uber-ing from the LIRR to Sayville. Chris from Colonial confirmed he'll be at the station with a bus. Bridget Bauer joined (count me in, 1 person).",
+      "notes": "Patrick Boucher booked a SFS special to the Pines for Friday night at 7pm; five in his group, all on the 5:13pm train arriving Sayville at 6:38pm. Alexander F. Marks joined — catching the same train from Penn, asked about Uber-ing from the LIRR to Sayville. Chris from Colonial confirmed he'll be at the station with a bus. Bridget Bauer joined (count me in, 1 person). Brian Girard joined.",
       "riders_yes": [
         "Alexander F. Marks",
-        "Bridget Bauer"
+        "Bridget Bauer",
+        "Brian Girard"
       ],
       "riders_maybe": [],
       "riders_note": "Organizer's group is 5 people.",
@@ -73,6 +74,25 @@
       "riders_maybe": [],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Tue Nov 24th"
+    },
+    {
+      "date": "2026-11-27",
+      "day": "Fri, Nov 27",
+      "time": "10:00 AM ish",
+      "route": "→ Pines",
+      "status": "gauging",
+      "organizer": "Nick Ammaturo",
+      "departure": null,
+      "provider": null,
+      "departure_note": null,
+      "connection": null,
+      "notes": "Nick Ammaturo is gauging interest in a special departing the mainland Fri Nov 27 mid-morning (~10am ish) — arrive or depart from the Pines; planning to book one regardless. Jerry Johnson is interested in a Sayville → Pines special around noon, or an extra special around noon or 1.",
+      "riders_yes": [],
+      "riders_maybe": [
+        "Jerry Johnson"
+      ],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Gauging Interest - Friday 11/27 - 10am (ish) departing mainland"
     }
   ],
   "history": [
