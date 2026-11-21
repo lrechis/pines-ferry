@@ -1,28 +1,6 @@
 {
-  "updated": "Fri Nov 20, 2026, 8:15 PM EST",
+  "updated": "Fri Nov 20, 2026, 9:15 PM EST",
   "runs": [
-    {
-      "date": "2026-11-20",
-      "day": "Fri, Nov 20",
-      "time": "7:00 PM",
-      "route": "Sayville → Pines",
-      "status": "confirmed",
-      "organizer": "Patrick Boucher",
-      "departure": "Sayville",
-      "provider": "Sayville Ferry",
-      "departure_note": null,
-      "connection": "On the 5:13 PM train that gets into Sayville at 6:38 PM",
-      "notes": "Patrick Boucher booked a SFS special to the Pines for Friday night at 7pm; five in his group, all on the 5:13pm train arriving Sayville at 6:38pm. Alexander F. Marks joined — catching the same train from Penn, asked about Uber-ing from the LIRR to Sayville. Chris from Colonial confirmed he'll be at the station with a bus. Bridget Bauer joined (count me in, 1 person). Brian Girard joined. Aaron Schlaphoff joined.",
-      "riders_yes": [
-        "Alexander F. Marks",
-        "Bridget Bauer",
-        "Brian Girard",
-        "Aaron Schlaphoff"
-      ],
-      "riders_maybe": [],
-      "riders_note": "Organizer's group is 5 people.",
-      "subject": "[Pines Winter Ferry] Friday 11/20 - 7pm Special to the Pines"
-    },
     {
       "date": "2026-11-20",
       "day": "Fri, Nov 20",
@@ -83,6 +61,27 @@
     }
   ],
   "history": [
+    {
+      "date": "2026-11-20",
+      "day": "Fri, Nov 20",
+      "time": "7:00 PM",
+      "route": "Sayville → Pines",
+      "status": "confirmed",
+      "organizer": "Patrick Boucher",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": "On the 5:13 PM train that gets into Sayville at 6:38 PM",
+      "detail": null,
+      "riders_yes": [
+        "Alexander F. Marks",
+        "Bridget Bauer",
+        "Brian Girard",
+        "Aaron Schlaphoff"
+      ],
+      "riders_maybe": [],
+      "riders_note": "Organizer's group is 5 people."
+    },
     {
       "date": "2026-11-19",
       "day": "Thu, Nov 19",
@@ -534,6 +533,6 @@
       "riders_note": null
     }
   ],
-  "booked_total": 237,
+  "booked_total": 238,
   "booked_since": "2020-12-24"
 }
