@@ -1,25 +1,6 @@
 {
-  "updated": "Fri Nov 20, 2026, 9:15 PM EST",
+  "updated": "Fri Nov 20, 2026, 10:15 PM EST",
   "runs": [
-    {
-      "date": "2026-11-20",
-      "day": "Fri, Nov 20",
-      "time": "8:00 PM",
-      "route": "Sayville → Pines",
-      "status": "confirmed",
-      "organizer": "Chris from Shell",
-      "departure": "Sayville",
-      "provider": "Sayville Ferry",
-      "departure_note": null,
-      "connection": null,
-      "notes": "Chris from Shell booked a special from Sayville Fri Nov 20 at 8pm for himself and two others (and a dog); can't make the 7pm — lands at LGA at 6:30. Adam Stracher joined with a party of 3 plus 2 dogs.",
-      "riders_yes": [
-        "Adam Stracher"
-      ],
-      "riders_maybe": [],
-      "riders_note": "Organizer's group is 3 people (and a dog); Adam Stracher's party is 3 people plus 2 dogs.",
-      "subject": "[Pines Winter Ferry] Friday 11/20 8pm Special"
-    },
     {
       "date": "2026-11-24",
       "day": "Tue, Nov 24",
@@ -61,6 +42,24 @@
     }
   ],
   "history": [
+    {
+      "date": "2026-11-20",
+      "day": "Fri, Nov 20",
+      "time": "8:00 PM",
+      "route": "Sayville → Pines",
+      "status": "confirmed",
+      "organizer": "Chris from Shell",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": null,
+      "detail": null,
+      "riders_yes": [
+        "Adam Stracher"
+      ],
+      "riders_maybe": [],
+      "riders_note": "Organizer's group is 3 people (and a dog); Adam Stracher's party is 3 people plus 2 dogs."
+    },
     {
       "date": "2026-11-20",
       "day": "Fri, Nov 20",
@@ -533,6 +532,6 @@
       "riders_note": null
     }
   ],
-  "booked_total": 238,
+  "booked_total": 239,
   "booked_since": "2020-12-24"
 }
