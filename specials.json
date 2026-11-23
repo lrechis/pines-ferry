@@ -1,6 +1,23 @@
 {
-  "updated": "Mon Nov 23, 2026, 10:50 AM EST",
+  "updated": "Mon Nov 23, 2026, 1:50 PM EST",
   "runs": [
+    {
+      "date": "2026-11-24",
+      "day": "Tue, Nov 24",
+      "time": "9:00 PM ish",
+      "route": "→ Pines",
+      "status": "gauging",
+      "organizer": "Robert Gray",
+      "departure": null,
+      "provider": null,
+      "departure_note": null,
+      "connection": null,
+      "notes": "Robert Gray is gauging interest in a Tuesday night special to the Pines, thinking around 9 PM. Departure point not stated.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Tuesday night special"
+    },
     {
       "date": "2026-11-27",
       "day": "Fri, Nov 27",
