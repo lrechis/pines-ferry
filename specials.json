@@ -1,23 +1,6 @@
 {
-  "updated": "Sun Nov 22, 2026, 10:45 PM EST",
+  "updated": "Mon Nov 23, 2026, 10:50 AM EST",
   "runs": [
-    {
-      "date": "2026-11-24",
-      "day": "Tue, Nov 24",
-      "time": "Around 6:30",
-      "route": "Direction not stated",
-      "status": "gauging",
-      "organizer": "Jon Staff",
-      "departure": null,
-      "provider": null,
-      "departure_note": null,
-      "connection": null,
-      "notes": "Jon Staff is gauging interest in a special around 6:30 on Tue Nov 24. Direction and departure point not stated in the post.",
-      "riders_yes": [],
-      "riders_maybe": [],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Tue Nov 24th"
-    },
     {
       "date": "2026-11-27",
       "day": "Fri, Nov 27",
