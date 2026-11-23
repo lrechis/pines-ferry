@@ -1,5 +1,5 @@
 {
-  "updated": "Mon Nov 23, 2026, 1:50 PM EST",
+  "updated": "Mon Nov 23, 2026, 2:18 PM EST",
   "runs": [
     {
       "date": "2026-11-24",
@@ -12,9 +12,11 @@
       "provider": null,
       "departure_note": null,
       "connection": null,
-      "notes": "Robert Gray is gauging interest in a Tuesday night special to the Pines, thinking around 9 PM. Departure point not stated.",
+      "notes": "Robert Gray is gauging interest in a Tuesday night special to the Pines, thinking around 9 PM. Departure point not stated. Glenn Rice is interested. Sam Benedict asked whether 9 PM is the earliest — he's looking for a boat back around 5 PM, 7 PM latest.",
       "riders_yes": [],
-      "riders_maybe": [],
+      "riders_maybe": [
+        "Glenn Rice"
+      ],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Tuesday night special"
     },
