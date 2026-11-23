@@ -1,23 +1,6 @@
 {
-  "updated": "Sun Nov 22, 2026, 12:45 PM EST",
+  "updated": "Sun Nov 22, 2026, 10:45 PM EST",
   "runs": [
-    {
-      "date": "2026-11-22",
-      "day": "Sun, Nov 22",
-      "time": "8:30 PM",
-      "route": "Sayville → Cherry Grove",
-      "status": "confirmed",
-      "organizer": "Elena L. Cohen",
-      "departure": "Sayville",
-      "provider": "Sayville Ferry",
-      "departure_note": null,
-      "connection": null,
-      "notes": "Elena L. Cohen has a boat Sun Nov 22 at 8:30 PM from Sayville to Cherry Grove, assuming the weather holds up, and is happy to have people join and to have it stop at the Pines. Organizer's group is 2 people and a dog.",
-      "riders_yes": [],
-      "riders_maybe": [],
-      "riders_note": "Organizer's group is 2 people and a dog.",
-      "subject": "[Pines Winter Ferry] Sayville to Cherry Grove Sunday 8:30 pm"
-    },
     {
       "date": "2026-11-24",
       "day": "Tue, Nov 24",
@@ -77,6 +60,22 @@
     }
   ],
   "history": [
+    {
+      "date": "2026-11-22",
+      "day": "Sun, Nov 22",
+      "time": "8:30 PM",
+      "route": "Sayville → Cherry Grove",
+      "status": "confirmed",
+      "organizer": "Elena L. Cohen",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": null,
+      "detail": null,
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": "Organizer's group is 2 people and a dog."
+    },
     {
       "date": "2026-11-22",
       "day": "Sun, Nov 22",
@@ -583,6 +582,6 @@
       "riders_note": null
     }
   ],
-  "booked_total": 240,
+  "booked_total": 241,
   "booked_since": "2020-12-24"
 }
