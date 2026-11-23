@@ -1,5 +1,5 @@
 {
-  "updated": "Mon Nov 23, 2026, 2:18 PM EST",
+  "updated": "Mon Nov 23, 2026, 4:15 PM EST",
   "runs": [
     {
       "date": "2026-11-24",
@@ -19,6 +19,23 @@
       ],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Tuesday night special"
+    },
+    {
+      "date": "2026-11-26",
+      "day": "Thu, Nov 26",
+      "time": "1:00 PM",
+      "route": "Pines → Sayville",
+      "status": "gauging",
+      "organizer": "David Weigand",
+      "departure": null,
+      "provider": "H2O Limo",
+      "departure_note": null,
+      "connection": null,
+      "notes": "David Weigand is gauging interest in a Thanksgiving Day special leaving the Pines around 1:00 PM. He plans to use H2O. If anyone is coming earlier to the Pines, he can tag-team with that boat and leave earlier.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Proposed special"
     },
     {
       "date": "2026-11-27",
