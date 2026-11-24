@@ -1,5 +1,5 @@
 {
-  "updated": "Tue Nov 24, 2026, 1:45 PM EST",
+  "updated": "Tue Nov 24, 2026, 2:45 PM EST",
   "runs": [
     {
       "date": "2026-11-24",
@@ -78,6 +78,23 @@
       "riders_maybe": [],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Confirmed H2O Sunday 11/29"
+    },
+    {
+      "date": "2026-12-04",
+      "day": "Fri, Dec 4",
+      "time": "12:00 PM",
+      "route": "Pines → Sayville",
+      "status": "confirmed",
+      "organizer": "Rob Cordell",
+      "departure": null,
+      "provider": null,
+      "departure_note": null,
+      "connection": null,
+      "notes": "Rob Cordell is booking a special from the Pines to Sayville at 12:00 noon on Friday, December 4, to the Sayville Ferry terminal. A good opportunity to run errands on the mainland before returning to the island on the afternoon ferry.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Friday 12/4 - 12 Noon departing Pines to Sayville Ferry terminal"
     }
   ],
   "history": [
