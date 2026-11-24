@@ -1,5 +1,5 @@
 {
-  "updated": "Tue Nov 24, 2026, 2:45 PM EST",
+  "updated": "Tue Nov 24, 2026, 5:30 PM EST",
   "runs": [
     {
       "date": "2026-11-24",
@@ -20,6 +20,23 @@
       ],
       "riders_note": null,
       "subject": "[Pines Winter Ferry] Tuesday night special"
+    },
+    {
+      "date": "2026-11-25",
+      "day": "Wed, Nov 25",
+      "time": "10:30 PM",
+      "route": "Sayville → Pines",
+      "status": "confirmed",
+      "organizer": "Joe Finedore",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": null,
+      "notes": "Joe Finedore has a ferry Wed Nov 25 at 10:30 PM from Sayville to the Pines.",
+      "riders_yes": [],
+      "riders_maybe": [],
+      "riders_note": null,
+      "subject": "[Pines Winter Ferry] Sayville Special Wed 11/25 - 10:30p"
     },
     {
       "date": "2026-11-26",
