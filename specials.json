@@ -1,26 +1,6 @@
 {
-  "updated": "Tue Nov 24, 2026, 5:30 PM EST",
+  "updated": "Tue Nov 24, 2026, 11:17 PM EST",
   "runs": [
-    {
-      "date": "2026-11-24",
-      "day": "Tue, Nov 24",
-      "time": "9:15 PM",
-      "route": "→ Pines",
-      "status": "confirmed",
-      "organizer": "Robert Gray",
-      "departure": "Blue Point",
-      "provider": "H2O Limo",
-      "departure_note": null,
-      "connection": null,
-      "notes": "Robert Gray has confirmed with H2O Limo for 9:15 PM tonight from Blue Point to the Pines — $250 split among however many passengers. Glenn Rice is interested. Austin Allan might be interested — his train arrives Sayville at 8:59 PM; he asked about the cost. Eduardo Osorio is not sure yet and asked to be kept posted if more people join. Sam Benedict no longer needs service tomorrow.",
-      "riders_yes": [],
-      "riders_maybe": [
-        "Glenn Rice",
-        "Austin Allan"
-      ],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Tuesday night special"
-    },
     {
       "date": "2026-11-25",
       "day": "Wed, Nov 25",
@@ -115,6 +95,25 @@
     }
   ],
   "history": [
+    {
+      "date": "2026-11-24",
+      "day": "Tue, Nov 24",
+      "time": "9:15 PM",
+      "route": "→ Pines",
+      "status": "confirmed",
+      "organizer": "Robert Gray",
+      "departure": "Blue Point",
+      "provider": "H2O Limo",
+      "departure_note": null,
+      "connection": null,
+      "detail": null,
+      "riders_yes": [],
+      "riders_maybe": [
+        "Glenn Rice",
+        "Austin Allan"
+      ],
+      "riders_note": null
+    },
     {
       "date": "2026-11-22",
       "day": "Sun, Nov 22",
@@ -637,6 +636,6 @@
       "riders_note": null
     }
   ],
-  "booked_total": 241,
+  "booked_total": 242,
   "booked_since": "2020-12-24"
 }
