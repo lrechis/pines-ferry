@@ -225,12 +225,23 @@
   .btn-mail.secondary{background:transparent;color:var(--navy)}
   @media (prefers-color-scheme: dark){ .btn-mail.secondary{color:#e8f0f5;border-color:var(--line)} }
   .btn-mail:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  /* Storm alert banner */
+  .storm-banner{margin:22px 0 4px;background:#b91c1c;color:#fff;border:3px solid #7f1d1d;border-radius:18px;padding:20px 22px;box-shadow:0 12px 32px rgba(185,28,28,.35)}
+  .storm-banner h2{font-family:"Newsreader",Georgia,serif;font-size:clamp(24px,4vw,34px);line-height:1.05;margin:0 0 8px;color:#fff}
+  .storm-banner p{margin:0;font-size:16.5px;line-height:1.55;font-weight:600}
+  .storm-banner p strong{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
   .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media(max-width:640px){.footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
+
+  <div class="storm-banner" role="alert">
+    <h2>⚠ Storm Warning — Thursday into Friday</h2>
+    <p>An enormous storm is coming Thursday into Friday. <strong>Boats will likely not run on Thursday or Friday — nobody should plan on having transport on these days.</strong> Please call your operator to confirm any boat before relying on it.</p>
+  </div>
 
   <header class="hero">
     <div class="route-line"><span>Long Island</span><span class="dot" aria-hidden="true"></span><span class="rule" aria-hidden="true"></span><span aria-hidden="true">⛴</span><span class="rule" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span><span>Fire Island Pines</span></div>
