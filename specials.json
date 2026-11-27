@@ -1,27 +1,6 @@
 {
-  "updated": "Fri Nov 27, 2026, 10:22 AM EST",
+  "updated": "Fri Nov 27, 2026, 2:15 PM EST",
   "runs": [
-    {
-      "date": "2026-11-27",
-      "day": "Fri, Nov 27",
-      "time": "11:30 AM or 12:00 PM",
-      "route": "Sayville → Pines",
-      "status": "confirmed",
-      "organizer": "Nick Ammaturo",
-      "departure": "Sayville",
-      "provider": "Sayville Ferry",
-      "departure_note": null,
-      "connection": "Confirm with the organizer before heading out",
-      "notes": "It's booked, but Sayville Ferry suggests 11:30 AM: high tide is at 12:20 PM and if the water crests the dock they would have to cancel, so getting there before high tide is best to be certain. The group will wait either way.",
-      "riders_yes": [
-        "Matthew Herzfeld",
-        "Paul Krieger",
-        "Jerry Johnson"
-      ],
-      "riders_maybe": [],
-      "riders_note": null,
-      "subject": "[Pines Winter Ferry] Gauging Interest - Friday 11/27 - 10am (ish) departing mainland"
-    },
     {
       "date": "2026-11-29",
       "day": "Sun, Nov 29",
@@ -58,6 +37,26 @@
     }
   ],
   "history": [
+    {
+      "date": "2026-11-27",
+      "day": "Fri, Nov 27",
+      "time": "11:30 AM or 12:00 PM",
+      "route": "Sayville → Pines",
+      "status": "confirmed",
+      "organizer": "Nick Ammaturo",
+      "departure": "Sayville",
+      "provider": "Sayville Ferry",
+      "departure_note": null,
+      "connection": "Confirm with the organizer before heading out",
+      "detail": null,
+      "riders_yes": [
+        "Matthew Herzfeld",
+        "Paul Krieger",
+        "Jerry Johnson"
+      ],
+      "riders_maybe": [],
+      "riders_note": null
+    },
     {
       "date": "2026-11-25",
       "day": "Wed, Nov 25",
@@ -599,6 +598,6 @@
       "riders_note": null
     }
   ],
-  "booked_total": 243,
+  "booked_total": 244,
   "booked_since": "2020-12-24"
 }
