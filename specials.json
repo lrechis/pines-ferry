@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Nov 27, 2026, 2:15 PM EST",
+  "updated": "Sat Nov 28, 2026, 12:15 AM EST",
   "runs": [
     {
       "date": "2026-11-29",
@@ -576,24 +576,6 @@
       "connection": "Organizer flying into LaGuardia, landing 8:30 PM; looking for a mainland departure around 10:00-10:30 PM (departure point not stated in the post)",
       "detail": null,
       "riders_yes": [],
-      "riders_maybe": [],
-      "riders_note": null
-    },
-    {
-      "date": "2026-10-28",
-      "day": "Wed, Oct 28",
-      "time": "10:30 AM",
-      "route": "Pines → Sayville",
-      "status": "confirmed",
-      "organizer": "Philip Carroll",
-      "departure": null,
-      "provider": null,
-      "departure_note": null,
-      "connection": null,
-      "detail": null,
-      "riders_yes": [
-        "Mark Campbell"
-      ],
       "riders_maybe": [],
       "riders_note": null
     }
